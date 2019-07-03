@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.b203a4a4.chunk.css",
-  "main.js": "/static/js/main.49f3e85a.chunk.js",
-  "main.js.map": "/static/js/main.49f3e85a.chunk.js.map",
+  "main.js": "/static/js/main.b530b48a.chunk.js",
+  "main.js.map": "/static/js/main.b530b48a.chunk.js.map",
   "static/js/1.feb9c2ae.chunk.js": "/static/js/1.feb9c2ae.chunk.js",
   "static/js/1.feb9c2ae.chunk.js.map": "/static/js/1.feb9c2ae.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -26,6 +26,6 @@
   "static/media/App.css": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf",
   "static/css/main.b203a4a4.chunk.css.map": "/static/css/main.b203a4a4.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.0385cbfd55ac2afbcb86c2186fba3f0a.js": "/precache-manifest.0385cbfd55ac2afbcb86c2186fba3f0a.js",
+  "precache-manifest.75bcf96311f8b4cb693f17da86845b29.js": "/precache-manifest.75bcf96311f8b4cb693f17da86845b29.js",
   "service-worker.js": "/service-worker.js"
 }
