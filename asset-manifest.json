@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.784bdd67.chunk.css",
-  "main.js": "/static/js/main.68b2ae7b.chunk.js",
-  "main.js.map": "/static/js/main.68b2ae7b.chunk.js.map",
+  "main.css": "/static/css/main.95c7ec3e.chunk.css",
+  "main.js": "/static/js/main.8eaecbd1.chunk.js",
+  "main.js.map": "/static/js/main.8eaecbd1.chunk.js.map",
   "static/js/1.395ff731.chunk.js": "/static/js/1.395ff731.chunk.js",
   "static/js/1.395ff731.chunk.js.map": "/static/js/1.395ff731.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -24,8 +24,8 @@
   "static/media/appartoo.png": "/static/media/appartoo.cc897495.png",
   "static/media/darkest-chevron-arrow-down.svg": "/static/media/darkest-chevron-arrow-down.2bdab533.svg",
   "static/media/App.css": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf",
-  "static/css/main.784bdd67.chunk.css.map": "/static/css/main.784bdd67.chunk.css.map",
+  "static/css/main.95c7ec3e.chunk.css.map": "/static/css/main.95c7ec3e.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.b1a8b7a24859b46ab1c3f4ef75b764ff.js": "/precache-manifest.b1a8b7a24859b46ab1c3f4ef75b764ff.js",
+  "precache-manifest.1328b5ea691a1ff26fa67d8226604cc9.js": "/precache-manifest.1328b5ea691a1ff26fa67d8226604cc9.js",
   "service-worker.js": "/service-worker.js"
 }
