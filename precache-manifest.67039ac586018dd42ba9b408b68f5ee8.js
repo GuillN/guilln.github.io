@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "dd46779f6b4d075c890457e6782c8b66",
-    "url": "/static/media/download.dd46779f.svg"
+    "revision": "968aaa24eeffdd779e4fc9c27c5cb730",
+    "url": "/static/media/france.968aaa24.svg"
   },
   {
-    "revision": "59758b8cb2d98d39317a",
-    "url": "/static/css/main.122b93cb.chunk.css"
+    "revision": "98012bb1b878eb38cb1b",
+    "url": "/static/css/main.ffc77026.chunk.css"
   },
   {
-    "revision": "e95fa127d430298f7fca",
-    "url": "/static/js/1.e95fa127.chunk.js"
+    "revision": "4c66c11b2dd69fdeb896",
+    "url": "/static/js/1.4c66c11b.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -52,12 +52,12 @@ self.__precacheManifest = [
     "url": "/static/media/darkest-chevron-arrow-down.2bdab533.svg"
   },
   {
-    "revision": "59758b8cb2d98d39317a",
-    "url": "/static/js/main.59758b8c.chunk.js"
+    "revision": "dd46779f6b4d075c890457e6782c8b66",
+    "url": "/static/media/download.dd46779f.svg"
   },
   {
-    "revision": "968aaa24eeffdd779e4fc9c27c5cb730",
-    "url": "/static/media/france.968aaa24.svg"
+    "revision": "98012bb1b878eb38cb1b",
+    "url": "/static/js/main.98012bb1.chunk.js"
   },
   {
     "revision": "e5564902e2642c5e6e2e98e68a7d41f5",
@@ -96,6 +96,10 @@ self.__precacheManifest = [
     "url": "/static/media/snorkunking_ig.44da79fd.PNG"
   },
   {
+    "revision": "8dcd0a8dbfb217bc10c1d72fd38a38c5",
+    "url": "/static/media/monita.8dcd0a8d.png"
+  },
+  {
     "revision": "818ad30bd58f126e9f80eae661d75373",
     "url": "/static/media/appartoo.818ad30b.png"
   },
@@ -104,7 +108,7 @@ self.__precacheManifest = [
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "403f9864efc6be79535137c749b42b8d",
+    "revision": "e77bbf596bf5f7e6a3294d3f0df9edbb",
     "url": "/index.html"
   }
 ];
