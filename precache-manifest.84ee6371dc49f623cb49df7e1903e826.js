@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "8e455b8667a2bda9a4bebbb10ff32fcc",
-    "url": "/static/media/darker-chevron-arrow-down.8e455b86.svg"
+    "revision": "2bdab533e2d90e4166737a55c7b7c782",
+    "url": "/static/media/darkest-chevron-arrow-down.2bdab533.svg"
   },
   {
-    "revision": "f0bc0089787788d35592",
-    "url": "/static/css/main.99e952c6.chunk.css"
+    "revision": "276fd8a62366822b411d",
+    "url": "/static/css/main.75776e85.chunk.css"
   },
   {
-    "revision": "294452d7146e344500be",
-    "url": "/static/js/1.294452d7.chunk.js"
+    "revision": "5b519fc435d77fb87b65",
+    "url": "/static/js/1.5b519fc4.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "url": "/static/media/chevron-arrow-down.53a1301e.svg"
   },
   {
-    "revision": "f0bc0089787788d35592",
-    "url": "/static/js/main.f0bc0089.chunk.js"
+    "revision": "8e455b8667a2bda9a4bebbb10ff32fcc",
+    "url": "/static/media/darker-chevron-arrow-down.8e455b86.svg"
   },
   {
-    "revision": "2bdab533e2d90e4166737a55c7b7c782",
-    "url": "/static/media/darkest-chevron-arrow-down.2bdab533.svg"
+    "revision": "276fd8a62366822b411d",
+    "url": "/static/js/main.276fd8a6.chunk.js"
   },
   {
     "revision": "dd46779f6b4d075c890457e6782c8b66",
@@ -84,11 +84,15 @@ self.__precacheManifest = [
     "url": "/static/media/appartoo.cc897495.png"
   },
   {
+    "revision": "006aab371b26242fa55ed175f50b701e",
+    "url": "/static/media/luxo.006aab37.png"
+  },
+  {
     "revision": "3cb2dc7f975186787930e7b93ee18dc0",
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "22669ef60b1b5bc8208b2bd43828c251",
+    "revision": "cb553e4959509c707c458c6289fc54a3",
     "url": "/index.html"
   }
 ];
