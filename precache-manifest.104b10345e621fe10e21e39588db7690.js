@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "968aaa24eeffdd779e4fc9c27c5cb730",
-    "url": "/static/media/france.968aaa24.svg"
+    "revision": "e5564902e2642c5e6e2e98e68a7d41f5",
+    "url": "/static/media/united-kingdom.e5564902.svg"
   },
   {
-    "revision": "98012bb1b878eb38cb1b",
-    "url": "/static/css/main.ffc77026.chunk.css"
+    "revision": "1172dcdbf37282eadaa1",
+    "url": "/static/css/main.4cbcb4d7.chunk.css"
   },
   {
-    "revision": "4c66c11b2dd69fdeb896",
-    "url": "/static/js/1.4c66c11b.chunk.js"
+    "revision": "d62ff374b8ab1218693f",
+    "url": "/static/js/1.d62ff374.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -56,12 +56,12 @@ self.__precacheManifest = [
     "url": "/static/media/download.dd46779f.svg"
   },
   {
-    "revision": "98012bb1b878eb38cb1b",
-    "url": "/static/js/main.98012bb1.chunk.js"
+    "revision": "968aaa24eeffdd779e4fc9c27c5cb730",
+    "url": "/static/media/france.968aaa24.svg"
   },
   {
-    "revision": "e5564902e2642c5e6e2e98e68a7d41f5",
-    "url": "/static/media/united-kingdom.e5564902.svg"
+    "revision": "1172dcdbf37282eadaa1",
+    "url": "/static/js/main.1172dcdb.chunk.js"
   },
   {
     "revision": "29d4766f9bf1261981dd805d8f3bde00",
@@ -96,19 +96,27 @@ self.__precacheManifest = [
     "url": "/static/media/snorkunking_ig.44da79fd.PNG"
   },
   {
+    "revision": "818ad30bd58f126e9f80eae661d75373",
+    "url": "/static/media/appartoo.818ad30b.png"
+  },
+  {
     "revision": "8dcd0a8dbfb217bc10c1d72fd38a38c5",
     "url": "/static/media/monita.8dcd0a8d.png"
   },
   {
-    "revision": "818ad30bd58f126e9f80eae661d75373",
-    "url": "/static/media/appartoo.818ad30b.png"
+    "revision": "d22cb338fd148a924b225a44f94978ad",
+    "url": "/static/media/website.d22cb338.png"
+  },
+  {
+    "revision": "b02818be5d534afa6f687e5c27d1f151",
+    "url": "/static/media/classrooms.b02818be.png"
   },
   {
     "revision": "3cb2dc7f975186787930e7b93ee18dc0",
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "e77bbf596bf5f7e6a3294d3f0df9edbb",
+    "revision": "14ca9c9ee494ac6703014d7b9c4ab22d",
     "url": "/index.html"
   }
 ];
