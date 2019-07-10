@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.50a81715.chunk.css",
-  "main.js": "/static/js/main.51c2fa7b.chunk.js",
-  "main.js.map": "/static/js/main.51c2fa7b.chunk.js.map",
+  "main.css": "/static/css/main.ed64fda6.chunk.css",
+  "main.js": "/static/js/main.4cde8408.chunk.js",
+  "main.js.map": "/static/js/main.4cde8408.chunk.js.map",
   "static/js/1.d62ff374.chunk.js": "/static/js/1.d62ff374.chunk.js",
   "static/js/1.d62ff374.chunk.js.map": "/static/js/1.d62ff374.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -31,8 +31,8 @@
   "static/media/website.png": "/static/media/website.d22cb338.png",
   "static/media/classrooms.png": "/static/media/classrooms.b02818be.png",
   "static/media/App.css": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf",
-  "static/css/main.50a81715.chunk.css.map": "/static/css/main.50a81715.chunk.css.map",
+  "static/css/main.ed64fda6.chunk.css.map": "/static/css/main.ed64fda6.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.96f2aa7f1018a2e0832ce1034e6f67bc.js": "/precache-manifest.96f2aa7f1018a2e0832ce1034e6f67bc.js",
+  "precache-manifest.a8f0f3d3b7c4bfbdb286126e2a486dcb.js": "/precache-manifest.a8f0f3d3b7c4bfbdb286126e2a486dcb.js",
   "service-worker.js": "/service-worker.js"
 }
