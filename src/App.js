@@ -33,20 +33,16 @@ class App extends Component {
     constructor(props){
         super(props);
         this.state = {
-            email: 'gnaassan@gmail.com',
-            dl_txt: 'Download CV',
-            cv: cv_en,
-            dl_cv: cv_en_pdf,
-            strings: strings_en
+            cv: cv_fr,
+            dl_cv: cv_fr_pdf,
+            strings: strings_fr
         };
         this.copyToClipboard = this.copyToClipboard.bind(this);
         App.scrollTop = App.scrollTop.bind(this);
         App.scrollDown = App.scrollDown.bind(this);
         App.scrollDowner = App.scrollDowner.bind(this);
         App.scrollDownest = App.scrollDownest.bind(this);
-        this.handleScroll = this.handleScroll.bind(this);
-        this.cvEn = this.cvEn.bind(this);
-        this.cvFr = this.cvFr.bind(this);
+        App.handleScroll = App.handleScroll.bind(this);
         this.stringsEn = this.stringsEn.bind(this);
         this.stringsFr = this.stringsFr.bind(this);
     }
@@ -122,12 +118,12 @@ class App extends Component {
         changeWord();
         setInterval(changeWord, 4000);
 
-        return window.addEventListener('scroll', this.handleScroll)
+        return window.addEventListener('scroll', App.handleScroll)
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
-        return window.removeEventListener('scroll', this.handleScroll)
+        return window.removeEventListener('scroll', App.handleScroll)
     }
 
     copyToClipboard(e) {
@@ -176,9 +172,8 @@ class App extends Component {
         }
     }
 
-    handleScroll() {
+    static handleScroll() {
         const scrollPositionY = +window.scrollY;
-        // console.log(scrollPositionY);
         const height1 = document.getElementById('header').clientHeight;
         const scroll1 = scrollPositionY >= height1;
         const navbar = document.getElementById('navbar');
@@ -212,28 +207,18 @@ class App extends Component {
         }
     }
 
-    cvEn() {
-        this.setState({cv: cv_en, dl_txt: 'Download CV', dl_cv: cv_en_pdf});
-        this.stringsEn()
-    }
-
-    cvFr() {
-        this.setState({cv: cv_fr, dl_txt: 'Télécharger CV', dl_cv: cv_fr_pdf});
-        this.stringsFr()
-    }
-
     stringsEn() {
-        this.setState({strings: strings_en})
+        this.setState({strings: strings_en, dl_cv: cv_en_pdf, cv: cv_en})
     }
 
     stringsFr() {
-        this.setState({strings: strings_fr})
+        this.setState({strings: strings_fr, dl_cv: cv_fr_pdf, cv: cv_fr})
     }
 
     render() {
-        const { email, cv, dl_txt, dl_cv, strings } = this.state;
+        const { cv, dl_cv, strings } = this.state;
         let ukFlagStyle, frFlagStyle, frNavStyle, enNavStyle;
-        if (dl_txt === 'Download CV') {
+        if (strings === strings_en) {
             ukFlagStyle = {
                 marginRight: '5vmin',
                 border: 'solid #6981bd'
@@ -247,7 +232,7 @@ class App extends Component {
                 borderBottom: 'solid',
                 transition: '.2s'
             }
-        } else {
+        } else if (strings === strings_fr) {
             ukFlagStyle = {
                 marginRight: '5vmin',
                 border: 'transparent'
@@ -267,7 +252,7 @@ class App extends Component {
                 <header className="header" id="header">
                     <div className="top-logos">
                         <div id="email-logo" onClick={this.copyToClipboard}>
-                            <p id="email-txt">{email}</p>
+                            <p id="email-txt">{strings.email}</p>
                             <img src={mailLogo} className="small-logo" alt="mail_logo"/>
                         </div>
                         <a href="https://github.com/guilln">
@@ -292,8 +277,8 @@ class App extends Component {
                     <a id="link1" className="nav-link" onClick={App.scrollDown}>CV</a>
                     <a id="link2" className="nav-link" onClick={App.scrollDowner}>Formation</a>
                     <a id="link3" className="nav-link" onClick={App.scrollDownest}>Projects</a>
-                    <a className="nav-link-right" onClick={this.cvFr} style={frNavStyle}>FR</a>
-                    <a className="nav-link-right" onClick={this.cvEn} style={enNavStyle}>EN</a>
+                    <a className="nav-link-right" onClick={this.stringsFr} style={frNavStyle}>FR</a>
+                    <a className="nav-link-right" onClick={this.stringsEn} style={enNavStyle}>EN</a>
                 </nav>
 
                 <section className="cvSection" id="cvSection">
@@ -301,12 +286,12 @@ class App extends Component {
                         <img src={cv} alt="cv" className="cv"/>
                         <div className="dl">
                             <a href={dl_cv} className="texts">
-                                <p className="dl-txt">{dl_txt}</p>
+                                <p className="dl-txt">{strings.download}</p>
                                 <img src={dl} alt="dl" className="dl-icon"/>
                             </a>
                             <div className="flags">
-                                <img src={uk} alt="uk_flag" className="flag" onClick={this.cvEn} style={ukFlagStyle}/>
-                                <img src={fr} alt="fr_flag" className="flag" onClick={this.cvFr} style={frFlagStyle}/>
+                                <img src={uk} alt="uk_flag" className="flag" onClick={this.stringsEn} style={ukFlagStyle}/>
+                                <img src={fr} alt="fr_flag" className="flag" onClick={this.stringsFr} style={frFlagStyle}/>
                             </div>
                         </div>
                     </div>
