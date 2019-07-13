@@ -15,55 +15,43 @@ import cv_en_pdf from './images/cv_en.pdf';
 import isep from './images/iseplogo.png'
 import cnam from './images/cnamlogo.png'
 import cirruseo from './images/cirruseo.png'
-import appartoo from './images/appartoo.png'
+import appartoo_logo from './images/appartoo_logo.png'
+import luxo from './images/luxo.png'
+import snork1 from './images/snorkunking_menu.PNG'
+import snork2 from './images/snorkunking_ig.PNG'
+import appartoo from'./images/appartoo.png'
+import monita from './images/monita.png'
+import website from './images/website.png'
+import classrooms from './images/classrooms.png'
+
+import strings_fr from './strings/strings_fr.json'
+import strings_en from './strings/strings_en.json'
 import './App.css';
 
-        // const subtitles = ['Full-stack Web', 'Software'];
 class App extends Component {
-
-
-
 
     constructor(props){
         super(props);
         this.state = {
             email: 'gnaassan@gmail.com',
-            // subIndex: 0,
-            // fading: false,
-            // words : [],
-            // wordArray : [],
-            // currentWord : 0,
-            dl_txt: 'Télécharger CV',
-            cv: cv_fr,
-            dl_cv: cv_fr_pdf
+            dl_txt: 'Download CV',
+            cv: cv_en,
+            dl_cv: cv_en_pdf,
+            strings: strings_en
         };
-        // this.initAnimation = this.initAnimation.bind(this);
-        // this.changeWord = this.changeWord.bind(this);
-        // this.animateLetterIn = this.animateLetterIn.bind(this);
-        // this.animateLetterOut = this.animateLetterOut.bind(this);
-        // this.splitLetters = this.splitLetters.bind(this);
         this.copyToClipboard = this.copyToClipboard.bind(this);
+        App.scrollTop = App.scrollTop.bind(this);
         App.scrollDown = App.scrollDown.bind(this);
         App.scrollDowner = App.scrollDowner.bind(this);
         App.scrollDownest = App.scrollDownest.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
         this.cvEn = this.cvEn.bind(this);
         this.cvFr = this.cvFr.bind(this);
-
-        // this.initAnimation()
-
+        this.stringsEn = this.stringsEn.bind(this);
+        this.stringsFr = this.stringsFr.bind(this);
     }
 
     componentDidMount() {
-        this.interval = setInterval(() => {
-            // this.setState({fading: true});
-            // let index = this.state.subIndex;
-            // this.setState({ subIndex: index + 1 });
-            // this.changeWord();
-            // this.setState({fading: false})
-        }, 4000);
-
-        // setInterval(changeWord, 4000);
-
         var words = document.getElementsByClassName('word');
         var wordArray = [];
         var currentWord = 0;
@@ -75,30 +63,41 @@ class App extends Component {
 
         function changeWord() {
             var cw = wordArray[currentWord];
-            var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+            var nw = currentWord === words.length-1 ? wordArray[0] : wordArray[currentWord+1];
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
             }
 
             for (var i = 0; i < nw.length; i++) {
-                nw[i].className = 'letter behind';
+                if (nw[i].innerHTML === 'k') {
+                    nw[i].className = 'letter behind space';
+                } else {
+                    nw[i].className = 'letter behind';
+                }
                 nw[0].parentElement.style.opacity = 1;
                 animateLetterIn(nw, i);
             }
-
-            currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+            currentWord = (currentWord === wordArray.length-1) ? 0 : currentWord+1;
         }
 
         function animateLetterOut(cw, i) {
             setTimeout(function() {
-                cw[i].className = 'letter out';
+                if (cw[i].innerHTML === 'k') {
+                    cw[i].className = 'letter out space';
+                } else {
+                    cw[i].className = 'letter out';
+                }
             }, i*80);
         }
 
         function animateLetterIn(nw, i) {
             setTimeout(function() {
-                nw[i].className = 'letter in';
-            }, 340+(i*80));
+                if (nw[i].innerHTML === 'k') {
+                    nw[i].className = 'letter in space';
+                } else {
+                    nw[i].className = 'letter in';
+                }
+            }, 740+(i*80));
         }
 
         function splitLetters(word) {
@@ -107,7 +106,11 @@ class App extends Component {
             var letters = [];
             for (var i = 0; i < content.length; i++) {
                 var letter = document.createElement('span');
-                letter.className = 'letter';
+                if (content.charAt(i) === 'k') {
+                    letter.className = 'letter space';
+                } else {
+                    letter.className = 'letter';
+                }
                 letter.innerHTML = content.charAt(i);
                 word.appendChild(letter);
                 letters.push(letter);
@@ -118,67 +121,14 @@ class App extends Component {
 
         changeWord();
         setInterval(changeWord, 4000);
+
+        return window.addEventListener('scroll', this.handleScroll)
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
+        return window.removeEventListener('scroll', this.handleScroll)
     }
-
-
-    // initAnimation() {
-    //     this.setState({words:document.getElementsByClassName('word')});
-    //
-    //     // this.state.words[this.state.currentWord].style.opacity = 1;
-    //     for (let i = 0; i < this.state.words.length; i++) {
-    //         this.splitLetters(this.state.words[i]);
-    //     }
-    // }
-    //
-    // changeWord() {
-    //     var cw = this.state.wordArray[this.state.currentWord];
-    //     var nw = this.state.currentWord === this.state.words.length-1 ? this.state.wordArray[0] : this.state.wordArray[this.state.currentWord+1];
-    //     for (var i = 0; i < cw.length; i++) {
-    //         this.animateLetterOut(cw, i);
-    //     }
-    //
-    //     for (var i = 0; i < nw.length; i++) {
-    //         nw[i].className = 'letter behind';
-    //         nw[0].parentElement.style.opacity = 1;
-    //         this.animateLetterIn(nw, i);
-    //     }
-    //
-    //
-    //     this.setState({currentWord: (this.state.currentWord === this.state.wordArray.length-1) ? 0 : this.state.currentWord+1})
-    // }
-    //
-    //
-    // animateLetterOut(cw, i) {
-    //     setTimeout(function() {
-    //         cw[i].className = 'letter out';
-    //     }, i*80);
-    // }
-    //
-    // animateLetterIn(nw, i) {
-    //     setTimeout(function() {
-    //         nw[i].className = 'letter in';
-    //     }, 340+(i*80));
-    // }
-    //
-    // splitLetters(word) {
-    //     var content = word.innerHTML;
-    //     word.innerHTML = '';
-    //     var letters = [];
-    //     for (var i = 0; i < content.length; i++) {
-    //         var letter = document.createElement('span');
-    //         letter.className = 'letter';
-    //         letter.innerHTML = content.charAt(i);
-    //         word.appendChild(letter);
-    //         letters.push(letter);
-    //     }
-    //     this.setState((prevState) => ({
-    //         wordArray: [...prevState.wordArray, letters]
-    //     }))
-    // }
 
     copyToClipboard(e) {
         // Copy text
@@ -192,6 +142,10 @@ class App extends Component {
         e.target.focus()
     };
 
+    static scrollTop () {
+        window.scroll({top: 0, behavior: "smooth"})
+    }
+
     static scrollDown() {
         const height = document.getElementById("header").clientHeight;
         window.scroll({top: height, behavior: "smooth"})
@@ -200,27 +154,85 @@ class App extends Component {
     static scrollDowner() {
         const headerHeight = document.getElementById("header").clientHeight;
         const sectionHeight = document.getElementById("cvSection").clientHeight;
-        window.scroll({top: headerHeight + sectionHeight, behavior: "smooth"})
+        const navbar = document.getElementById('navbar');
+        const navHeight = navbar.clientHeight;
+        if (navbar.classList.contains('sticky')) {
+            window.scroll({top: headerHeight + sectionHeight - navHeight, behavior: "smooth"})
+        } else {
+            window.scroll({top: headerHeight + sectionHeight, behavior: "smooth"})
+        }
     }
 
     static scrollDownest() {
         const headerHeight = document.getElementById("header").clientHeight;
         const cvHeight = document.getElementById("cvSection").clientHeight;
         const schoolHeight = document.getElementById("schoolSection").clientHeight;
-        window.scroll({top: headerHeight + cvHeight + schoolHeight, behavior: "smooth"})
+        const navbar = document.getElementById('navbar');
+        const navHeight = navbar.clientHeight;
+        if (navbar.classList.contains('sticky')) {
+            window.scroll({top: headerHeight + cvHeight + schoolHeight - navHeight, behavior: "smooth"})
+        } else {
+            window.scroll({top: headerHeight + cvHeight + schoolHeight, behavior: "smooth"})
+        }
+    }
+
+    handleScroll() {
+        const scrollPositionY = +window.scrollY;
+        // console.log(scrollPositionY);
+        const height1 = document.getElementById('header').clientHeight;
+        const scroll1 = scrollPositionY >= height1;
+        const navbar = document.getElementById('navbar');
+        const link1 = document.getElementById('link1');
+        if (scroll1) {
+            navbar.classList.add('sticky');
+            link1.classList.add('underline')
+        } else {
+            navbar.classList.remove('sticky');
+            link1.classList.remove('underline')
+        }
+
+        const height2 = height1 + document.getElementById('cvSection').clientHeight - navbar.clientHeight;
+        const scroll2 = scrollPositionY >= height2;
+        const link2 = document.getElementById('link2');
+        if (scroll2) {
+            link1.classList.remove('underline');
+            link2.classList.add('underline')
+        } else {
+            link2.classList.remove('underline')
+        }
+
+        const height3 = height2 + document.getElementById('schoolSection').clientHeight - navbar.clientHeight;
+        const scroll3 = scrollPositionY >= height3;
+        const link3 = document.getElementById('link3');
+        if (scroll3) {
+            link2.classList.remove('underline');
+            link3.classList.add('underline')
+        } else {
+            link3.classList.remove('underline')
+        }
     }
 
     cvEn() {
-        this.setState({cv: cv_en, dl_txt: 'Download CV', dl_cv: cv_en_pdf})
+        this.setState({cv: cv_en, dl_txt: 'Download CV', dl_cv: cv_en_pdf});
+        this.stringsEn()
     }
 
     cvFr() {
-        this.setState({cv: cv_fr, dl_txt: 'Télécharger CV', dl_cv: cv_fr_pdf})
+        this.setState({cv: cv_fr, dl_txt: 'Télécharger CV', dl_cv: cv_fr_pdf});
+        this.stringsFr()
+    }
+
+    stringsEn() {
+        this.setState({strings: strings_en})
+    }
+
+    stringsFr() {
+        this.setState({strings: strings_fr})
     }
 
     render() {
-        const { email, cv, dl_txt, dl_cv, subIndex, fading } = this.state;
-        let ukFlagStyle, frFlagStyle;
+        const { email, cv, dl_txt, dl_cv, strings } = this.state;
+        let ukFlagStyle, frFlagStyle, frNavStyle, enNavStyle;
         if (dl_txt === 'Download CV') {
             ukFlagStyle = {
                 marginRight: '5vmin',
@@ -228,6 +240,12 @@ class App extends Component {
             };
             frFlagStyle = {
                 border: 'transparent'
+            };
+            frNavStyle = {
+            };
+            enNavStyle = {
+                borderBottom: 'solid',
+                transition: '.2s'
             }
         } else {
             ukFlagStyle = {
@@ -236,6 +254,12 @@ class App extends Component {
             };
             frFlagStyle = {
                 border: 'solid #6981bd'
+            };
+            frNavStyle = {
+                borderBottom: 'solid',
+                transition: '.2s'
+            };
+            enNavStyle = {
             }
         }
         return (
@@ -255,24 +279,23 @@ class App extends Component {
                     </div>
                     <img src={logo} className="main-logo" alt="logo" />
                     <h1 className="title">Guillaume Naassan</h1>
-                    <div className="main-text">
-                        <div className="subtitle-first">
-                            {/*<span className="word wisteria">tasty.</span>*/}
-                            {/*<span className="word belize">wonderful.</span>*/}
-                            {/*<span className="word pomegranate">fancy.</span>*/}
-                            <span className="word green">Web</span>
-                            <span className="word wisteria">Software</span>
-                        </div>
-                        <div className="subtitle-last">
-                            <span className="title">Dev</span>
-                        </div>
-                        {/*<p className="subtitle">Dev.</p>*/}
-                    {/*<h3 className='word green'>/!*{subtitles[subIndex % subtitles.length]} *!/Web Dev</h3>*/}
-                    {/*<h3 className='word midnight'>/!*{subtitles[subIndex % subtitles.length]} *!/Software Dev</h3>*/}
+                    <div className="subtitle-first">
+                        <span className="word green">Full-Stack Web</span>
+                        <span className="word wisteria">Software</span>
+                        <span className="subtitle">Developer</span>
                     </div>
-                    {/*<h3 className="subtitle" id="sub2">Software Dev</h3>*/}
                     <img src={chevron} alt="arrow_down" className="small-logo" onClick={App.scrollDown}/>
                 </header>
+
+                <nav className="nav" id="navbar">
+                    <img src={logo} alt="logo" onClick={App.scrollTop}/>
+                    <a id="link1" className="nav-link" onClick={App.scrollDown}>CV</a>
+                    <a id="link2" className="nav-link" onClick={App.scrollDowner}>Formation</a>
+                    <a id="link3" className="nav-link" onClick={App.scrollDownest}>Projects</a>
+                    <a className="nav-link-right" onClick={this.cvFr} style={frNavStyle}>FR</a>
+                    <a className="nav-link-right" onClick={this.cvEn} style={enNavStyle}>EN</a>
+                </nav>
+
                 <section className="cvSection" id="cvSection">
                     <div className="dlCv">
                         <img src={cv} alt="cv" className="cv"/>
@@ -282,8 +305,8 @@ class App extends Component {
                                 <img src={dl} alt="dl" className="dl-icon"/>
                             </a>
                             <div className="flags">
-                                <img src={fr} alt="fr_flag" className="flag" onClick={this.cvFr} style={frFlagStyle}/>
                                 <img src={uk} alt="uk_flag" className="flag" onClick={this.cvEn} style={ukFlagStyle}/>
+                                <img src={fr} alt="fr_flag" className="flag" onClick={this.cvFr} style={frFlagStyle}/>
                             </div>
                         </div>
                     </div>
@@ -293,26 +316,31 @@ class App extends Component {
                     <h2 className="school-title">Formation</h2>
                     <p className="text">
                         2013 - 2016<br/>
-                        École d'ingénieurs: Institut Supérieur d'Électronique de Paris
+                        {strings.school_isep}: Institut Supérieur d'Électronique de Paris<br/>
+                        {strings.cycle}
                     </p>
-                    <img src={isep} alt="isep_logo" className="isep-logo"/>
-                    <p className="text">
-                        Cycle préparatoire: Mathématiques, Physique, Sciences de l'Ingénieur<br/>
-                        Informatique: Algorithmique, Python
-                    </p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
+                        <img src={isep} alt="isep_logo" className="isep-logo"/>
+                    </a>
+                    <p className="text small">{strings.subjects}</p>
+                    <p className="text-green">{strings.subjects2}</p>
                     <hr className="line"/>
                     <p className="text">
                         2016 - 2017<br/>
-                        Crédits à la carte - Conservatoire National des Arts et Métiers
+                        Conservatoire National des Arts et Métiers
                     </p>
-                    <img src={cnam} alt="cnam_logo" className="cnam-logo"/>
-                    <p className="text">
-                        Informatique: Bases en SQL, HTML, JavaScript, CSS - Java avancé<br/>
+                    <a target="_blank" rel="noopener noreferrer" href="http://www.cnam.fr/">
+                        <img src={cnam} alt="cnam_logo" className="cnam-logo"/>
+                    </a>
+                    <p className="text-green">
+                        {strings.subjects3}<br/>
                         <hr className="small-line"/>
-                        Stage: Cirruseo
+                        {strings.internship}: Cirruseo
                     </p>
                     <div className="internship-container">
-                        <img src={cirruseo} alt="cirruseo_logo" className="internship-logo"/>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.cirruseo.com/">
+                            <img src={cirruseo} alt="cirruseo_logo" className="internship-logo"/>
+                        </a>
                         <p className="internship-text">
                             Google Script<br/>
                             Google Cloud Engine<br/>
@@ -322,26 +350,87 @@ class App extends Component {
                     <hr className="line"/>
                     <p className="text">
                         2017 - 2019<br/>
-                        ISEP: Cycle ingénieur
+                        {strings.school_isep}: Institut Supérieur d'Électronique de Paris<br/>
+                        {strings.cycle2}
                     </p>
-                    <img src={isep} alt="isep_logo" className="isep-logo"/>
-                    <p className="text">
-                        Informatique: Java, JavaFX, JavaEE, Spring, SQL, NoSQL<br/>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
+                        <img src={isep} alt="isep_logo" className="isep-logo"/>
+                    </a>
+                    <p className="text-green">
+                        {strings.subjects4}<br/>
                         <hr className="small-line"/>
-                        Stage: Appartoo
+                        {strings.internship}: Appartoo
                     </p>
                     <div className="internship-container">
-                        <img src={appartoo} alt="appartoo_logo" className="internship-logo"/>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.appartoo.com/">
+                            <img src={appartoo_logo} alt="appartoo_logo" className="internship-logo"/>
+                        </a>
                         <p className="internship-text">
                             Symfony<br/>
                             ExpressJS<br/>
                             AngularJS<br/>
                             Angular7<br/>
                             MongoDB<br/>
-                            Intégration continue
+                            {strings.integration}
                         </p>
                     </div>
-                    {/*<img src={chevron2} alt="arrow_down" className="small-logo" onClick={App.scrollDownest}/>*/}
+                    <img src={chevron2} alt="arrow_down" className="small-logo" onClick={App.scrollDownest}/>
+                </section>
+                <section className="projects-section">
+                    <h2 className="projects-title">{strings.projects_title}</h2>
+                    <div id="project1" className="project-container">
+                        <h3 className="project-title">Luxo</h3>
+                        <img id="img1" className="project-image" src={luxo} alt="luxo-img"/>
+                        <div id="txt1">
+                            <p className="project-text">{strings.project.luxo.description}</p>
+                            <p className="project-text">{strings.project.luxo.tech}</p>
+                        </div>
+                    </div>
+                    <div id="project2" className="project-container">
+                        <h3 className="project-title">Snorkunking</h3>
+                        <div id="img2" className="project-image-container">
+                            <img className="project-image-small" src={snork1} alt="snork-img-1"/>
+                            <img className="project-image-small" src={snork2} alt="snork-img-2"/>
+                        </div>
+                        <div id="txt2">
+                            <p className="project-text">{strings.project.snorkunking.description}</p>
+                            <p className="project-text">{strings.project.snorkunking.tech}</p>
+                        </div>
+                    </div>
+                    <div id="project3" className="project-container">
+                        <h3 className="project-title">Appartoo</h3>
+                        <img id="img3" className="project-image" src={appartoo} alt="appartoo-img"/>
+                        <div id="txt3">
+                            <p className="project-text">{strings.project.appartoo.description}</p>
+                            <p className="project-text">{strings.project.appartoo.tech}</p>
+                            <p className="project-text">{strings.project.appartoo.description2}</p>
+                            <p className="project-text">{strings.project.appartoo.tech2}</p>
+                        </div>
+                    </div>
+                    <div id="project4" className="project-container">
+                        <h3 className="project-title">Monita</h3>
+                        <img id="img4" className="project-image" src={monita} alt="monita-img"/>
+                        <div id="txt4">
+                            <p className="project-text">{strings.project.monita.description}</p>
+                            <p className="project-text">{strings.project.monita.tech}</p>
+                        </div>
+                    </div>
+                    <div id="project5" className="project-container">
+                        <h3 className="project-title">Portfolio</h3>
+                        <img id="img5" className="project-image" src={website} alt="website-img"/>
+                        <div id="txt5">
+                            <p className="project-text">{strings.project.website.description}</p>
+                            <p className="project-text">{strings.project.website.tech}</p>
+                        </div>
+                    </div>
+                    <div id="project6" className="project-container">
+                        <h3 className="project-title">Classrooms</h3>
+                        <img id="img6" className="project-image" src={classrooms} alt="classrooms-img"/>
+                        <div id="txt6">
+                            <p className="project-text">{strings.project.classrooms.description}</p>
+                            <p className="project-text">{strings.project.classrooms.tech}</p>
+                        </div>
+                    </div>
                 </section>
             </div>
         );

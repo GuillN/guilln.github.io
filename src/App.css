@@ -3,10 +3,6 @@
   src: url('./font/Cocon-RegularTR.ttf');
 }
 
-body {
-  height: 1000px;
-}
-
 p, h2 {
   font-family: 'Cocon', sans-serif;
 }
@@ -25,28 +21,13 @@ a {
 
 .header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 94vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.cvSection {
-  background-color: darkgrey;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 140vh;
-}
-
-.schoolSection {
-  background-color: lightgrey;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /*Header elements*/
@@ -61,25 +42,20 @@ a {
   font-size: 5vmin;
 }
 
-.main-text {
-  /*display: flex;*/
-}
-
 .subtitle {
-  padding-left: 5em;
+  padding-left: 6em;
+  font-family: 'Cocon', sans-serif;
+  font-size: 5vmin;
+  color: #61dafb;
 }
 
 .subtitle-first {
-  /*align-self: flex-end;*/
-}
-
-.subtitle-last {
-
+  margin-bottom: 3em;
 }
 
 .word {
   position: absolute;
-  width: 220px;
+  max-width: 350px;
   opacity: 0;
   font-family: 'Cocon', sans-serif;
   font-size: 5vmin;
@@ -93,13 +69,25 @@ a {
   transform-origin: 50% 50% 25px;
 }
 
+.letter.space {
+  margin-right: .3em;
+}
+
 .letter.out {
   transform: rotateX(90deg);
   transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
+.letter.out.space {
+  margin-right: .3em;
+}
+
 .letter.behind {
   transform: rotateX(-90deg);
+}
+
+.letter.behind.space {
+  margin-right: .3em;
 }
 
 .letter.in {
@@ -107,8 +95,13 @@ a {
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.letter.in.space {
+  margin-right: .3em;
+}
+
 .wisteria {
   color: #8e44ad;
+  margin-left: 1.5em;
 }
 
 .belize {
@@ -121,30 +114,12 @@ a {
 
 .green {
   color: #16a085;
+  margin-left: -1.5em;
 }
 
 .midnight {
   color: #2c3e50;
 }
-
-/*.fading {*/
-/*  color: #61dafb;*/
-/*  font-family: 'Cocon', sans-serif;*/
-/*  font-size: 5vmin;*/
-/*  animation-name: changeSubtitle;*/
-/*  !*animation-duration: 2s;*!*/
-/*  !*animation-iteration-count: infinite;*!*/
-/*}*/
-
-/*#sub2 {*/
-/*  animation-delay: 1s;*/
-/*}*/
-
-/*@keyframes changeSubtitle {*/
-/*  0% {opacity:1;}*/
-/*  50% {opacity:0;}*/
-/*  100% {opacity:1;}*/
-/*}*/
 
 .top-logos {
   display: flex;
@@ -193,7 +168,70 @@ a {
   cursor: pointer;
 }
 
+/*NAVBAR*/
+
+.nav {
+  overflow: hidden;
+  background-color: #282c34;
+  z-index: 2;
+  height: 6vh;
+}
+
+.nav-link {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 1vmin;
+  margin-top: 1vmin;
+  color: #61dafb;
+  cursor: pointer;
+  font-family: 'Cocon', sans-serif;
+}
+
+.nav-link-right {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 1vmin;
+  margin-top: 1vmin;
+  color: #61dafb;
+  cursor: pointer;
+  font-family: 'Cocon', sans-serif;
+}
+
+.underline {
+  border-bottom: solid;
+  transition: .2s;
+}
+
+.nav img {
+  float: left;
+  display: block;
+  height: 4vh;
+  padding: 1vmin;
+  cursor: pointer;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .cvSection {
+  padding-top: 6vmin;
+}
+
 /*CV Section elements*/
+
+.cvSection {
+  background-color: darkgrey;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 5vmin;
+}
 
 .dlCv {
   display: flex;
@@ -255,6 +293,7 @@ a {
   height: 10vmin;
   margin-left: 5vmin;
   margin-bottom: 3vmin;
+  margin-right: 5vmin;
   padding: 2vmin;
   border-radius: 20vmin;
 }
@@ -265,6 +304,15 @@ a {
 }
 
 /*Schools Section elements*/
+
+.schoolSection {
+  padding-top: 5vmin;
+  padding-bottom: 5vmin;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .school-title {
   color: darkblue;
@@ -292,6 +340,7 @@ a {
 
 .internship-container {
   display: flex;
+  margin-bottom: 5vmin;
 }
 
 .internship-logo {
@@ -313,6 +362,15 @@ a {
   color: darkblue;
 }
 
+.text-green {
+  font-size: 3vmin;
+  color: darkblue;
+}
+
+.text.small {
+  margin-bottom: -2vmin;
+}
+
 .line {
   width: 75%;
   border: 1px solid darkblue;
@@ -321,4 +379,148 @@ a {
 .small-line {
   width: 35%;
   border: 1px solid darkblue;
+}
+
+/*PROJECTS SECTION*/
+
+.projects-section {
+  padding-top: 5vmin;
+  padding-bottom: 5vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.projects-title {
+  color: #16a085;
+  font-family: 'Cocon', sans-serif;
+  font-size: 7vmin;
+  margin-top: 0;
+  padding-top: 3vmin;
+}
+
+.project-container {
+  width: 75%;
+  background-color: lightgrey;
+  border: solid #16a085;
+  border-radius: 3vmin;
+  position: relative;
+  margin-bottom: 5vmin;
+  overflow: auto;
+}
+
+.project-title {
+  color: #16a085;
+  font-family: 'Cocon', sans-serif;
+  font-size: 4vmin;
+}
+
+.project-image {
+  width: 90%;
+  padding-bottom: 6vmin;
+  transition: .5s ease-out;
+  height: auto;
+}
+
+.project-image-container {
+  width: 90%;
+  padding-bottom: 6vmin;
+  display: flex;
+  justify-content: space-between;
+  transition: .5s ease-out;
+}
+
+.project-image-small {
+  max-width: 48%;
+  height: auto;
+}
+
+.project-text {
+  opacity: 0;
+  color: #16a085;
+  background-color: lightgrey;
+  z-index: 1;
+  font-size: 2vmin;
+  border: solid;
+  border-radius: 1vmin;
+  padding: 1vmin;
+  text-align: center;
+  transition: .5s ease-out;
+}
+
+#txt1, #txt2, #txt3, #txt4, #txt5, #txt6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 15vmin;
+  left: 10%;
+  max-width: 80%;
+}
+
+#project2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#project1:hover > #img1 {
+  filter: brightness(15%);
+  transition: .5s ease;
+}
+
+#project2:hover > #img2 {
+  filter: brightness(33%);
+  transition: .5s ease;
+}
+
+#project3:hover > #img3 {
+  filter: brightness(33%);
+  transition: .5s ease;
+}
+
+#project4:hover > #img4 {
+  filter: brightness(33%);
+  transition: .5s ease;
+}
+
+#project5:hover > #img5 {
+  filter: brightness(33%);
+  transition: .5s ease;
+}
+
+#project6:hover > #img6 {
+  filter: brightness(33%);
+  transition: .5s ease;
+}
+
+#project1:hover > #txt1 p {
+  opacity: 1;
+  transition: .5s ease
+}
+
+#project2:hover > #txt2 p {
+  opacity: 1;
+  transition: .5s ease
+}
+
+#project3:hover > #txt3 p {
+  opacity: 1;
+  transition: .5s ease
+}
+
+#project4:hover > #txt4 p {
+  opacity: 1;
+  transition: .5s ease
+}
+
+#project5:hover > #txt5 p {
+  opacity: 1;
+  transition: .5s ease
+}
+
+#project6:hover > #txt6 p {
+  opacity: 1;
+  transition: .5s ease
 }

@@ -1,0 +1,40 @@
+{
+  "school_isep": "École d'Ingénieurs",
+  "cycle": "Cycle préparatoire",
+  "subjects": "Mathématiques, Physique, Sciences de l'Ingénieur",
+  "subjects2": "Algorithmique, Python",
+  "subjects3": "SQL, HTML, JavaScript, CSS, Java Avancé",
+  "internship": "Stage",
+  "cycle2": "Cycle ingénieur",
+  "subjects4": "JavaFX, JavaEE, Spring, NoSQL, PHP, ReactJS",
+  "integration": "Intégration contine",
+  "projects_title": "Projets",
+  "project": {
+    "luxo": {
+      "description": "Projet de domotique réalisé à l'ISEP en équipe de 5. Plateforme permettant principalement de gérer des capteurs présents dans une maison et en obtenir des statistiques",
+      "tech": "Base de données: SQL - Back-end: PHP - Front-end: JQuery, Bootstrap"
+    },
+    "snorkunking": {
+      "description": "Jeu vidéo réalisé à l'ISEP en équipe de 2. Multijoueur local en tour par tour jusqu'à 4 personnes ou CPU",
+      "tech": "JavaFX"
+    },
+    "appartoo": {
+      "description": "Gestion d'un site de recherche de colocation à Paris. Permet de créer des groupes d'utilisateurs, voir des logements sur une carte, discuter avec ses futurs colocataires, poster une annonce d'appartement ou de chambre",
+      "tech": "Base de données: SQL - Back-end: Symfony3 - Front-end: AngularJS - Serveur: Nginx - Tests unitaires: Jasmine - Intégration continue: Jenkins",
+      "description2": "Refonte du site en utilisant des technologies plus adaptées. Amélioration des performances, de l'organisation du code et de la base de données",
+      "tech2": "Base de données: MongoDB - Back-end: ExpressJS - Front-end: Angular7"
+    },
+    "monita": {
+      "description": "Projet réalisé à l'ISEP. Application permettant d'améliorer l'expérience des étudiants et des professeurs à l'ISEP. Entrer les notes de ses élèves facilement, avoir un récapitulatif global de ses notes",
+      "tech": "Base de données: MongoDB - Back-end: Spring - Front-end: ReactJS"
+    },
+    "website": {
+      "description": "Projet personnel récapitulatif de mon parcours et mes projets",
+      "tech": "ReactJS"
+    },
+    "classrooms": {
+      "description": "Project personnel permettant à un professeur de suivre le comportement et le travail de ses élèves tout au long de l'année",
+      "tech": "Base de données: MongoDB - Front-end/Back-end: MeteorJS, Blaze template"
+    }
+  }
+}

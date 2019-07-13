@@ -1,0 +1,40 @@
+{
+  "school_isep": "Engineer School",
+  "cycle": "Preparatory classes",
+  "subjects": "Mathematics, Physics, Engineer Sciences",
+  "subjects2" : "Algorithmics, Python",
+  "subjects3" : "SQL, HTML, JavaScript, CSS, Advanced Java",
+  "internship": "Internship",
+  "cycle2": "Engineering Course",
+  "subjects4": "JavaFX, JavaEE, Spring, NoSQL, PHP, ReactJS",
+  "integration": "Continuous integration",
+  "projects_title": "Projects",
+  "project": {
+    "luxo": {
+      "description": "Domotics project created at ISEP in a team of 5. Platform mainly used to manage sensors in a house and get statistics",
+      "tech": "Database: SQL - Back-end: PHP - Front-end: JQuery, Bootstrap"
+    },
+    "snorkunking": {
+      "description": "Video game created at ISEP in a team of 2. Turn based local multiplayer up to 4 human players or CPU",
+      "tech": "JavaFX"
+    },
+    "appartoo": {
+      "description": "Manage a flatshare website in Paris. Used to create groups of flatmates, see housings on a map, chat with your future flatmates, post a flat or room offer",
+      "tech": "Database: SQL - Back-end: Symfony3 - Front-end: AngularJS - Serveur: Nginx - Unit testing: Jasmine - Continuous integration: Jenkins",
+      "description2": "Redesign of the website using more relevant technologies. Increase in performance, code and database efficiency",
+      "tech2": "Database: MongoDB - Back-end: ExpressJS - Front-end: Angular7"
+    },
+    "monita": {
+      "description": "Project created at ISEP. Application allowing a better student and teacher experience at ISEP. Register your students' marks easily, get a global recap of your marks",
+      "tech": "Database: MongoDB - Back-end: Spring - Front-end: ReactJS"
+    },
+    "website": {
+      "description": "Personal project: summary of my studies and projects",
+      "tech": "ReactJS"
+    },
+    "classrooms": {
+      "description": "Personal project allowing a teacher to monitor the behaviour and work of their students all year long",
+      "tech": "Database: MongoDB - Front-end/Back-end: MeteorJS, Blaze template"
+    }
+  }
+}
