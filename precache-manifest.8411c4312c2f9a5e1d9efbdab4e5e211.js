@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/static/media/united-kingdom.e5564902.svg"
   },
   {
-    "revision": "64c415c92fa19f0ee4ce",
-    "url": "/static/css/main.a79619be.chunk.css"
+    "revision": "0c98714d4589e85b0216",
+    "url": "/static/css/main.619e2f7c.chunk.css"
   },
   {
-    "revision": "2a538e1c017ad2abdab9",
-    "url": "/static/js/1.2a538e1c.chunk.js"
+    "revision": "e52cdc87a5d1232c568c",
+    "url": "/static/js/1.e52cdc87.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -60,8 +60,8 @@ self.__precacheManifest = [
     "url": "/static/media/france.968aaa24.svg"
   },
   {
-    "revision": "64c415c92fa19f0ee4ce",
-    "url": "/static/js/main.64c415c9.chunk.js"
+    "revision": "0c98714d4589e85b0216",
+    "url": "/static/js/main.0c98714d.chunk.js"
   },
   {
     "revision": "51924b0ee72f5aa5cbacb13bd3f5006f",
@@ -88,10 +88,6 @@ self.__precacheManifest = [
     "url": "/static/media/luxo.006aab37.png"
   },
   {
-    "revision": "e9840ffcfffb7cdf47058a629d8718f9",
-    "url": "/static/media/snorkunking_menu.e9840ffc.PNG"
-  },
-  {
     "revision": "44da79fd13af3e10fa91635bc3bcc227",
     "url": "/static/media/snorkunking_ig.44da79fd.PNG"
   },
@@ -112,11 +108,15 @@ self.__precacheManifest = [
     "url": "/static/media/classrooms.b02818be.png"
   },
   {
+    "revision": "e9840ffcfffb7cdf47058a629d8718f9",
+    "url": "/static/media/snorkunking_menu.e9840ffc.PNG"
+  },
+  {
     "revision": "3cb2dc7f975186787930e7b93ee18dc0",
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "7b929ed442f97987fcc08930c7559740",
+    "revision": "f68cc2ba639b58f076cbf5df9a504eee",
     "url": "/index.html"
   }
 ];
