@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "c16f2553c13f75cac54f8d4e54817d7b",
+    "revision": "dd753a1a099f5afb003fc6016543192e",
     "url": "/index.html"
   }
 ];
