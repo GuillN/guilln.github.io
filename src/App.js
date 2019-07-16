@@ -373,10 +373,7 @@ class App extends Component {
                     </div>
                     <div id="project2" className="project-container">
                         <h3 className="project-title">Snorkunking</h3>
-                        <div id="img2" className="project-image-container">
-                            <img className="project-image-small" src={snork1} alt="snork-img-1"/>
-                            <img className="project-image-small" src={snork2} alt="snork-img-2"/>
-                        </div>
+                        <img id="img2" className="project-image" src={snork2} alt="snork-img-2"/>
                         <div id="txt2">
                             <p className="project-text">{strings.project.snorkunking.description}</p>
                             <p className="project-text">{strings.project.snorkunking.tech}</p>

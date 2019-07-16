@@ -408,6 +408,7 @@ a {
   position: relative;
   margin-bottom: 5vmin;
   overflow: auto;
+  max-height: 90vmin;
 }
 
 .project-title {
@@ -420,19 +421,6 @@ a {
   width: 90%;
   padding-bottom: 6vmin;
   transition: .5s ease-out;
-  height: auto;
-}
-
-.project-image-container {
-  width: 90%;
-  padding-bottom: 6vmin;
-  display: flex;
-  justify-content: space-between;
-  transition: .5s ease-out;
-}
-
-.project-image-small {
-  max-width: 48%;
   height: auto;
 }
 
