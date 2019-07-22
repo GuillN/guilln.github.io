@@ -17,7 +17,7 @@ import cnam from './images/cnamlogo.png'
 import cirruseo from './images/cirruseo.png'
 import appartoo_logo from './images/appartoo_logo.png'
 import luxo from './images/luxo.png'
-import snork1 from './images/snorkunking_menu.PNG'
+// import snork1 from './images/snorkunking_menu.PNG'
 import snork2 from './images/snorkunking_ig.PNG'
 import appartoo from'./images/appartoo.png'
 import monita from './images/monita.png'
@@ -27,6 +27,7 @@ import classrooms from './images/classrooms.png'
 import strings_fr from './strings/strings_fr.json'
 import strings_en from './strings/strings_en.json'
 import './App.css';
+import Nav from "./components/nav";
 
 class App extends Component {
 
@@ -43,8 +44,8 @@ class App extends Component {
         App.scrollDowner = App.scrollDowner.bind(this);
         App.scrollDownest = App.scrollDownest.bind(this);
         App.handleScroll = App.handleScroll.bind(this);
-        this.stringsEn = this.stringsEn.bind(this);
-        this.stringsFr = this.stringsFr.bind(this);
+        App.stringsEn = App.stringsEn.bind(this);
+        App.stringsFr = App.stringsFr.bind(this);
     }
 
     componentDidMount() {
@@ -207,17 +208,17 @@ class App extends Component {
         }
     }
 
-    stringsEn() {
+    static stringsEn() {
         this.setState({strings: strings_en, dl_cv: cv_en_pdf, cv: cv_en})
     }
 
-    stringsFr() {
+    static stringsFr() {
         this.setState({strings: strings_fr, dl_cv: cv_fr_pdf, cv: cv_fr})
     }
 
     render() {
         const { cv, dl_cv, strings } = this.state;
-        let ukFlagStyle, frFlagStyle, frNavStyle, enNavStyle;
+        let ukFlagStyle, frFlagStyle;
         if (strings === strings_en) {
             ukFlagStyle = {
                 marginRight: '5vmin',
@@ -225,12 +226,6 @@ class App extends Component {
             };
             frFlagStyle = {
                 border: 'transparent'
-            };
-            frNavStyle = {
-            };
-            enNavStyle = {
-                borderBottom: 'solid',
-                transition: '.2s'
             }
         } else if (strings === strings_fr) {
             ukFlagStyle = {
@@ -239,12 +234,6 @@ class App extends Component {
             };
             frFlagStyle = {
                 border: 'solid #6981bd'
-            };
-            frNavStyle = {
-                borderBottom: 'solid',
-                transition: '.2s'
-            };
-            enNavStyle = {
             }
         }
         return (
@@ -272,14 +261,7 @@ class App extends Component {
                     <img src={chevron} alt="arrow_down" className="small-logo" onClick={App.scrollDown}/>
                 </header>
 
-                <nav className="nav" id="navbar">
-                    <img src={logo} alt="logo" onClick={App.scrollTop}/>
-                    <a id="link1" className="nav-link" onClick={App.scrollDown}>CV</a>
-                    <a id="link2" className="nav-link" onClick={App.scrollDowner}>Formation</a>
-                    <a id="link3" className="nav-link" onClick={App.scrollDownest}>Projects</a>
-                    <a className="nav-link-right" onClick={this.stringsFr} style={frNavStyle}>FR</a>
-                    <a className="nav-link-right" onClick={this.stringsEn} style={enNavStyle}>EN</a>
-                </nav>
+                <Nav lang={strings}/>
 
                 <section className="cvSection" id="cvSection">
                     <div className="dlCv">
@@ -290,8 +272,8 @@ class App extends Component {
                                 <img src={dl} alt="dl" className="dl-icon"/>
                             </a>
                             <div className="flags">
-                                <img src={uk} alt="uk_flag" className="flag" onClick={this.stringsEn} style={ukFlagStyle}/>
-                                <img src={fr} alt="fr_flag" className="flag" onClick={this.stringsFr} style={frFlagStyle}/>
+                                <img src={uk} alt="uk_flag" className="flag" onClick={App.stringsEn} style={ukFlagStyle}/>
+                                <img src={fr} alt="fr_flag" className="flag" onClick={App.stringsFr} style={frFlagStyle}/>
                             </div>
                         </div>
                     </div>

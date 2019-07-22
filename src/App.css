@@ -168,60 +168,6 @@ a {
   cursor: pointer;
 }
 
-/*NAVBAR*/
-
-.nav {
-  overflow: hidden;
-  background-color: #282c34;
-  z-index: 2;
-  height: 6vh;
-}
-
-.nav-link {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 1vmin;
-  margin-top: 1vmin;
-  color: #61dafb;
-  cursor: pointer;
-  font-family: 'Cocon', sans-serif;
-}
-
-.nav-link-right {
-  float: right;
-  display: block;
-  text-align: center;
-  padding: 1vmin;
-  margin-top: 1vmin;
-  color: #61dafb;
-  cursor: pointer;
-  font-family: 'Cocon', sans-serif;
-}
-
-.underline {
-  border-bottom: solid;
-  transition: .2s;
-}
-
-.nav img {
-  float: left;
-  display: block;
-  height: 4vh;
-  padding: 1vmin;
-  cursor: pointer;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .cvSection {
-  padding-top: 6vmin;
-}
-
 /*CV Section elements*/
 
 .cvSection {
