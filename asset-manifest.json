@@ -1,9 +1,9 @@
 {
   "main.css": "/static/css/main.04ecd8d5.chunk.css",
-  "main.js": "/static/js/main.369e3fb2.chunk.js",
-  "main.js.map": "/static/js/main.369e3fb2.chunk.js.map",
-  "static/js/1.e52cdc87.chunk.js": "/static/js/1.e52cdc87.chunk.js",
-  "static/js/1.e52cdc87.chunk.js.map": "/static/js/1.e52cdc87.chunk.js.map",
+  "main.js": "/static/js/main.4eba982c.chunk.js",
+  "main.js.map": "/static/js/main.4eba982c.chunk.js.map",
+  "static/js/1.e74400b2.chunk.js": "/static/js/1.e74400b2.chunk.js",
+  "static/js/1.e74400b2.chunk.js.map": "/static/js/1.e74400b2.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/snorkunking_ig.PNG": "/static/media/snorkunking_ig.44da79fd.PNG",
@@ -33,6 +33,6 @@
   "static/media/App.css": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf",
   "static/css/main.04ecd8d5.chunk.css.map": "/static/css/main.04ecd8d5.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.dd225b38e25b6ca274b5641bea9d4beb.js": "/precache-manifest.dd225b38e25b6ca274b5641bea9d4beb.js",
+  "precache-manifest.8e8b57d8d0775c0ec98ce99d22cf4265.js": "/precache-manifest.8e8b57d8d0775c0ec98ce99d22cf4265.js",
   "service-worker.js": "/service-worker.js"
 }

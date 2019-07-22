@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/static/media/united-kingdom.e5564902.svg"
   },
   {
-    "revision": "369e3fb2a27f040d0e4d",
+    "revision": "4eba982cf04796c32a05",
     "url": "/static/css/main.04ecd8d5.chunk.css"
   },
   {
-    "revision": "e52cdc87a5d1232c568c",
-    "url": "/static/js/1.e52cdc87.chunk.js"
+    "revision": "e74400b289c4cb688635",
+    "url": "/static/js/1.e74400b2.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -60,8 +60,8 @@ self.__precacheManifest = [
     "url": "/static/media/france.968aaa24.svg"
   },
   {
-    "revision": "369e3fb2a27f040d0e4d",
-    "url": "/static/js/main.369e3fb2.chunk.js"
+    "revision": "4eba982cf04796c32a05",
+    "url": "/static/js/main.4eba982c.chunk.js"
   },
   {
     "revision": "51924b0ee72f5aa5cbacb13bd3f5006f",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "f224a64c569a08f9e447d60dee3bbd8c",
+    "revision": "3a7662a2189403174c7e92dd1064ca85",
     "url": "/index.html"
   }
 ];
