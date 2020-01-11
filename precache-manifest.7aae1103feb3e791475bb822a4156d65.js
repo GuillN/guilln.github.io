@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/france.968aaa24.svg"
   },
   {
-    "revision": "2212be3fbb8a677efc36",
+    "revision": "2807e25e1ef12599d5b8",
     "url": "/static/css/main.7ab8aff7.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/static/media/curved.54e3b0e8.svg"
   },
   {
-    "revision": "29d4766f9bf1261981dd805d8f3bde00",
-    "url": "/static/media/cv_fr.29d4766f.png"
+    "revision": "88a2b559628bb685946ef632f0611989",
+    "url": "/static/media/cv_fr.88a2b559.png"
   },
   {
-    "revision": "50dfc0d7cd75271e97675dfdb443a3cf",
-    "url": "/static/media/cv_fr.50dfc0d7.pdf"
+    "revision": "6564d84258932daf2cadf53a791fa2bb",
+    "url": "/static/media/cv_fr.6564d842.pdf"
   },
   {
     "revision": "aee15bebdaf23a03bd0e89aff3438bd4",
@@ -56,20 +56,20 @@ self.__precacheManifest = [
     "url": "/static/media/download.dd46779f.svg"
   },
   {
-    "revision": "2212be3fbb8a677efc36",
-    "url": "/static/js/main.2212be3f.chunk.js"
+    "revision": "2807e25e1ef12599d5b8",
+    "url": "/static/js/main.2807e25e.chunk.js"
   },
   {
     "revision": "e5564902e2642c5e6e2e98e68a7d41f5",
     "url": "/static/media/united-kingdom.e5564902.svg"
   },
   {
-    "revision": "51924b0ee72f5aa5cbacb13bd3f5006f",
-    "url": "/static/media/cv_en.51924b0e.png"
+    "revision": "f232bb92463ff68903faa854783edf9c",
+    "url": "/static/media/cv_en.f232bb92.png"
   },
   {
-    "revision": "53edafbd552e3fa213aef45576ac83b0",
-    "url": "/static/media/cv_en.53edafbd.pdf"
+    "revision": "2f169860c01b5cf5e1596884630f495c",
+    "url": "/static/media/cv_en.2f169860.pdf"
   },
   {
     "revision": "fa0c5684c1b00aef9c7f2ec60aab19db",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "4f21fb30b39bce3a3f8c743b291dc9a0",
+    "revision": "f4550338c8ca5f5a9d3b07d5baf2f342",
     "url": "/index.html"
   }
 ];
