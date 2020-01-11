@@ -108,7 +108,7 @@ class App extends Component {
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         words[currentWord].style.display = 'inline';
                         changeWordNext(nw)
-                    }, 250);
+                    }, 300);
                 }
             }, i*80);
         }
