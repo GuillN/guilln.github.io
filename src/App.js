@@ -51,7 +51,7 @@ class App extends Component {
 
     componentDidMount() {
         var words = document.getElementsByClassName('word');
-        var wordArray = [];
+        var letters = [];
         var currentWord = 0;
 
         console.log('Animation start');
@@ -64,14 +64,17 @@ class App extends Component {
 
             splitLetters(words[i]);
         }
-        console.log(`Splitting done. wordArray is: ${wordArray}`);
+        console.log(`Splitting done`);
+        for (var x = 0; x < letters.length; x++) {
+            console.log(`letters is: ${letters[x].innerHTML}`);
+        }
 
         function changeWord() {
             console.log(`Changing word ...`);
-            var cw = wordArray[currentWord];
+            var cw = letters[currentWord];
             console.log(`Current word: ${cw}`);
             var nextWord = currentWord === words.length-1 ? 0 : currentWord+1;
-            var nw = wordArray[nextWord];
+            var nw = letters[nextWord];
             console.log(`Next word: ${nw}`);
             words[nextWord].style.display = 'inline';
             for (var i = 0; i < cw.length; i++) {
@@ -91,7 +94,7 @@ class App extends Component {
                 nw[0].parentElement.style.opacity = 1;
                 animateLetterIn(nw, i);
             }
-            currentWord = (currentWord === wordArray.length-1) ? 0 : currentWord+1;
+            currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
         }
 
         function animateLetterOut(cw, i) {
@@ -115,10 +118,10 @@ class App extends Component {
         }
 
         function splitLetters(word) {
-            console.log(`Splitting letters of word: ${word}`);
+            console.log(`Splitting letters of word: ${word.innerHTML}`);
             var content = word.innerHTML;
             word.innerHTML = '';
-            var letters = [];
+            var lettersArray = [];
             for (var i = 0; i < content.length; i++) {
                 var letter = document.createElement('span');
                 if (content.charAt(i) === 'k') {
@@ -128,17 +131,17 @@ class App extends Component {
                 }
                 letter.innerHTML = content.charAt(i);
                 word.appendChild(letter);
-                letters.push(letter);
+                lettersArray.push(letter);
             }
 
-            wordArray.push(letters);
+            letters.push(lettersArray);
         }
 
         function hideWords() {
             console.log('Hiding words...');
             for (let i = 1; i < words.length; i++) {
                 words[i].setAttribute('display', 'none');
-                console.log(`Word: ${words[i]} hidden`);
+                console.log(`Word: ${words[i].innerHTML} hidden`);
             }
         }
 
