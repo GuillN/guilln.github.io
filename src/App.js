@@ -65,25 +65,22 @@ class App extends Component {
             splitLetters(words[i]);
         }
         console.log(`Splitting done`);
-        for (var x = 0; x < letters.length; x++) {
-            console.log(`letters is: ${letters[x].innerHTML}`);
-        }
 
         function changeWord() {
             console.log(`Changing word ...`);
             var cw = letters[currentWord];
-            console.log(`Current word: ${cw}`);
             var nextWord = currentWord === words.length-1 ? 0 : currentWord+1;
             var nw = letters[nextWord];
-            console.log(`Next word: ${nw}`);
-            words[nextWord].style.display = 'inline';
+
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
                 if (i === cw.length-1) {
+                    console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                     words[currentWord].style.display = 'none';
                 }
             }
 
+            console.log(`Displaying word: ${words[nextWord].innerHTML}`);
             words[nextWord].style.display = 'inline';
             for (var i = 0; i < nw.length; i++) {
                 if (nw[i].innerHTML === 'k') {
@@ -104,6 +101,7 @@ class App extends Component {
                 } else {
                     cw[i].className = 'letter out';
                 }
+                console.log(`Letter ${cw[i].innerHTML} is out`);
             }, i*80);
         }
 
@@ -114,6 +112,7 @@ class App extends Component {
                 } else {
                     nw[i].className = 'letter in';
                 }
+                console.log(`Letter ${nw[i].innerHTML} is in`);
             }, 740+(i*80));
         }
 
