@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/france.968aaa24.svg"
   },
   {
-    "revision": "569b7d3187dba2e7a64c",
+    "revision": "2bf7c75d0d8454323780",
     "url": "/static/css/main.fa944f46.chunk.css"
   },
   {
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/static/media/download.dd46779f.svg"
   },
   {
-    "revision": "569b7d3187dba2e7a64c",
-    "url": "/static/js/main.569b7d31.chunk.js"
+    "revision": "2bf7c75d0d8454323780",
+    "url": "/static/js/main.2bf7c75d.chunk.js"
   },
   {
     "revision": "e5564902e2642c5e6e2e98e68a7d41f5",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "821f02ac4effb4408bfd7a58b8169597",
+    "revision": "b1cf63d6c8eff9b74baae379c291aff7",
     "url": "/index.html"
   }
 ];
