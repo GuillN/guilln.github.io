@@ -97,13 +97,15 @@ class App extends Component {
                 console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
                 console.log(`Length of current word ${cw.length}`);
                 if (i === cw.length-1) {
-                    console.log(`Hiding word: ${words[currentWord].innerHTML}`);
-                    words[currentWord].style.display = 'none';
-                    currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
-                    console.log(`Displaying word: ${words[currentWord].innerHTML}`);
-                    words[currentWord].style.display = 'inline';
+                    setTimeout(function () {
+                        console.log(`Hiding word: ${words[currentWord].innerHTML}`);
+                        words[currentWord].style.display = 'none';
+                        currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
+                        console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                        words[currentWord].style.display = 'inline';
+                    }, 2000);
                 }
-            }, i*40);
+            }, i*80);
         }
 
         function animateLetterIn(nw, i) {
