@@ -108,7 +108,7 @@ class App extends Component {
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         words[currentWord].style.display = 'inline';
                         changeWordNext(nw)
-                    }, 500);
+                    }, 300);
                 }
             }, i*80);
         }
@@ -293,6 +293,7 @@ class App extends Component {
                         <div className="subtitle-first">
                             <span className="word green">Full-Stack Web</span>
                             <span className="word wisteria">Software</span>
+                            <span className="word pomegranate">Videogame</span>
                             <span className="subtitle">Developer</span>
                         </div>
                         <img src={chevron} alt="arrow_down" className="small-logo" onClick={App.scrollDown}/>
