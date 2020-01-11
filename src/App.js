@@ -108,7 +108,7 @@ class App extends Component {
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         words[currentWord].style.display = 'inline';
                         changeWordNext(nw)
-                    }, 200);
+                    }, 250);
                 }
             }, i*80);
         }
@@ -121,7 +121,7 @@ class App extends Component {
                     nw[i].className = 'letter in';
                 }
                 console.log(`Letter ${nw[i].innerHTML} is in`);
-            }, 740+(i*80));
+            }, i*80);
         }
 
         function splitLetters(word) {
