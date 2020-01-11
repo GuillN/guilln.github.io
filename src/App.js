@@ -54,20 +54,25 @@ class App extends Component {
         var wordArray = [];
         var currentWord = 0;
 
-
+        console.log('Animation start');
         hideWords();
         words[currentWord].style.opacity = 1;
         words[currentWord].style.display = 'inline';
+
+        console.log(`Splitting words into letters ...`);
         for (var i = 0; i < words.length; i++) {
+
             splitLetters(words[i]);
         }
+        console.log(`Splitting done. wordArray is: ${wordArray}`);
 
         function changeWord() {
-
+            console.log(`Changing word ...`);
             var cw = wordArray[currentWord];
-
+            console.log(`Current word: ${cw}`);
             var nextWord = currentWord === words.length-1 ? 0 : currentWord+1;
             var nw = wordArray[nextWord];
+            console.log(`Next word: ${nw}`);
             words[nextWord].style.display = 'inline';
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
@@ -110,7 +115,7 @@ class App extends Component {
         }
 
         function splitLetters(word) {
-
+            console.log(`Splitting letters of word: ${word}`);
             var content = word.innerHTML;
             word.innerHTML = '';
             var letters = [];
@@ -130,8 +135,10 @@ class App extends Component {
         }
 
         function hideWords() {
+            console.log('Hiding words...');
             for (let i = 1; i < words.length; i++) {
-                words[i].setAttribute('display', 'none')
+                words[i].setAttribute('display', 'none');
+                console.log(`Word: ${words[i]} hidden`);
             }
         }
 
