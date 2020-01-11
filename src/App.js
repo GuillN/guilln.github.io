@@ -114,7 +114,7 @@ class App extends Component {
                     nw[i].className = 'letter in';
                 }
                 console.log(`Letter ${nw[i].innerHTML} is in`);
-            }, i*80);
+            }, 740+(i*80));
         }
 
         function splitLetters(word) {
@@ -133,6 +133,7 @@ class App extends Component {
                 word.appendChild(letter);
                 lettersArray.push(letter);
             }
+
             letters.push(lettersArray);
         }
 

@@ -43,14 +43,14 @@ a {
 }
 
 .subtitle {
-    padding-left: 1em;
+    padding-left: .3em;
     font-family: 'Cocon', sans-serif;
     font-size: 5vmin;
     color: #61dafb;
 }
 
 .subtitle-first {
-    margin-bottom: .3em;
+    margin-bottom: 3em;
 }
 
 .word {
