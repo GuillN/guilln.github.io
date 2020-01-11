@@ -71,8 +71,11 @@ class App extends Component {
             words[nextWord].style.display = 'inline';
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
+                if (i === cw.length) {
+                    words[currentWord].style.display = 'none';
+                }
             }
-            words[currentWord].style.display = 'none';
+
             words[nextWord].style.display = 'inline';
             for (var i = 0; i < nw.length; i++) {
                 if (nw[i].innerHTML === 'k') {
