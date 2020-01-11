@@ -1,460 +1,466 @@
 @font-face {
-  font-family: 'Cocon';
-  src: url('./font/Cocon-RegularTR.ttf');
+    font-family: 'Cocon';
+    src: url('./font/Cocon-RegularTR.ttf');
 }
 
 p, h2 {
-  font-family: 'Cocon', sans-serif;
+    font-family: 'Cocon', sans-serif;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 .main {
-  text-align: center;
+    text-align: center;
 }
 
 .header {
-  background-color: #282c34;
-  height: 94vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 /*Header elements*/
 
 .main-logo {
-  height: 25vmin;
+    height: 25vmin;
 }
 
 .title {
-  color: #61dafb;
-  font-family: 'Cocon', sans-serif;
-  font-size: 5vmin;
+    color: #61dafb;
+    font-family: 'Cocon', sans-serif;
+    font-size: 5vmin;
 }
 
 .subtitle {
-  padding-left: 6em;
-  font-family: 'Cocon', sans-serif;
-  font-size: 5vmin;
-  color: #61dafb;
+    padding-left: 6em;
+    font-family: 'Cocon', sans-serif;
+    font-size: 5vmin;
+    color: #61dafb;
 }
 
 .subtitle-first {
-  margin-bottom: 3em;
+    margin-bottom: 3em;
 }
 
 .word {
-  position: absolute;
-  max-width: 350px;
-  opacity: 0;
-  font-family: 'Cocon', sans-serif;
-  font-size: 5vmin;
+    position: absolute;
+    max-width: 350px;
+    opacity: 0;
+    font-family: 'Cocon', sans-serif;
+    font-size: 5vmin;
 }
 
 .letter {
-  display: inline-block;
-  position: relative;
-  float: left;
-  transform: translateZ(25px);
-  transform-origin: 50% 50% 25px;
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
 }
 
 .letter.space {
-  margin-right: .3em;
+    margin-right: .3em;
 }
 
 .letter.out {
-  transform: rotateX(90deg);
-  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .letter.out.space {
-  margin-right: .3em;
+    margin-right: .3em;
 }
 
 .letter.behind {
-  transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
 }
 
 .letter.behind.space {
-  margin-right: .3em;
+    margin-right: .3em;
 }
 
 .letter.in {
-  transform: rotateX(0deg);
-  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .letter.in.space {
-  margin-right: .3em;
+    margin-right: .3em;
 }
 
 .wisteria {
-  color: #8e44ad;
-  margin-left: 1.5em;
+    color: #8e44ad;
+    margin-left: 1.5em;
 }
 
 .belize {
-  color: #2980b9;
+    color: #2980b9;
 }
 
 .pomegranate {
-  color: #c0392b;
+    color: #c0392b;
 }
 
 .green {
-  color: #16a085;
-  margin-left: -1.5em;
+    color: #16a085;
+    margin-left: -1.5em;
 }
 
 .midnight {
-  color: #2c3e50;
+    color: #2c3e50;
 }
 
 .top-logos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.bot-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #email-logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 44vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 44vmin;
 }
 
 #email-logo:hover #email-txt {
-  opacity: 1;
+    opacity: 1;
 }
 
 #git-logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 44vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 44vmin;
 }
 
 #git-logo:hover #git-txt {
-  opacity: 1;
+    opacity: 1;
 }
 
 #email-txt {
-  opacity: 0;
-  transition: .5s;
-  color: #61dafb;
-  font-size: calc(5px + 2vmin);
-  cursor: pointer;
+    opacity: 0;
+    transition: .5s;
+    color: #61dafb;
+    font-size: calc(5px + 2vmin);
+    cursor: pointer;
 }
 
 #git-txt {
-  opacity: 0;
-  transition: .5s;
-  color: #61dafb;
-  font-size: calc(5px + 2vmin);
-  cursor: pointer;
+    opacity: 0;
+    transition: .5s;
+    color: #61dafb;
+    font-size: calc(5px + 2vmin);
+    cursor: pointer;
 }
 
 /*CV Section elements*/
 
 .cvSection {
-  background-color: darkgrey;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-bottom: 5vmin;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 5vmin;
 }
 
 .dlCv {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .flags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .texts {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dl {
-  display: flex;
-  flex-direction: column;
-  padding: 2vmin;
-  border: solid;
-  border-radius: 2vmin;
-  border-color: #6981bd;
-  background-color: white;
-  margin-left: 5vmin;
-  margin-bottom: 5vmin;
+    display: flex;
+    flex-direction: column;
+    padding: 2vmin;
+    border: solid;
+    border-radius: 2vmin;
+    border-color: #6981bd;
+    background-color: white;
+    margin-left: 5vmin;
+    margin-bottom: 5vmin;
 }
 
 .cv {
-  height: 100vmin;
-  padding: 5vmin;
-  margin-top: 5vmin;
-  margin-bottom: 5vmin;
-  margin-left: 5vmin;
-  border: solid;
-  border-radius: 2vmin;
-  border-color: #6981bd;
-  background-color: white;
+    height: 100vmin;
+    padding: 5vmin;
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
+    margin-left: 5vmin;
+    border: solid;
+    border-radius: 2vmin;
+    border-color: #6981bd;
+    background-color: white;
 }
 
 .dl-txt {
-  color: #6981bd;
-  font-family: 'Cocon', sans-serif;
-  font-size: 5vmin;
+    color: #6981bd;
+    font-family: 'Cocon', sans-serif;
+    font-size: 5vmin;
 }
 
 .dl-icon {
-  height: 5vmin;
-  margin-left: 2vmin;
+    height: 5vmin;
+    margin-left: 2vmin;
 }
 
 .flag {
-  cursor: pointer;
-  height: 10vmin;
-  margin-left: 5vmin;
-  margin-bottom: 3vmin;
-  margin-right: 5vmin;
-  padding: 2vmin;
-  border-radius: 20vmin;
+    cursor: pointer;
+    height: 10vmin;
+    margin-left: 5vmin;
+    margin-bottom: 3vmin;
+    margin-right: 5vmin;
+    padding: 2vmin;
+    border-radius: 20vmin;
 }
 
 .small-logo {
-  height: 6vmin;
-  cursor: pointer;
+    height: 6vmin;
+    cursor: pointer;
 }
 
 /*Schools Section elements*/
 
 .schoolSection {
-  padding-top: 5vmin;
-  padding-bottom: 5vmin;
-  background-color: lightgrey;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    padding-top: 5vmin;
+    padding-bottom: 5vmin;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .school-title {
-  color: darkblue;
-  font-family: 'Cocon', sans-serif;
-  font-size: 7vmin;
-  margin-top: 0;
-  padding-top: 3vmin;
+    color: darkblue;
+    font-family: 'Cocon', sans-serif;
+    font-size: 7vmin;
+    margin-top: 0;
+    padding-top: 3vmin;
 }
 
 .isep-logo {
-  height: 26vmin;
-  border: solid darkblue;
-  border-radius: 3vmin;
-  background-color: white;
-  padding: 2vmin;
+    height: 26vmin;
+    border: solid darkblue;
+    border-radius: 3vmin;
+    background-color: white;
+    padding: 2vmin;
 }
 
 .cnam-logo {
-  width: 55vmin;
-  border: solid darkblue;
-  border-radius: 3vmin;
-  background-color: white;
-  padding: 2vmin;
+    width: 55vmin;
+    border: solid darkblue;
+    border-radius: 3vmin;
+    background-color: white;
+    padding: 2vmin;
 }
 
 .internship-container {
-  display: flex;
-  margin-bottom: 5vmin;
+    display: flex;
+    margin-bottom: 5vmin;
 }
 
 .internship-logo {
-  height: 10vmin;
-  border: solid darkblue;
-  border-radius: 3vmin;
-  background-color: white;
-  padding: 2vmin;
+    height: 10vmin;
+    border: solid darkblue;
+    border-radius: 3vmin;
+    background-color: white;
+    padding: 2vmin;
 }
 
 .internship-text {
-  font-size: 2vmin;
-  color: darkblue;
-  margin-left: 3vmin;
+    font-size: 2vmin;
+    color: darkblue;
+    margin-left: 3vmin;
 }
 
 .text {
-  font-size: 3vmin;
-  color: darkblue;
+    font-size: 3vmin;
+    color: darkblue;
 }
 
 .text-green {
-  font-size: 3vmin;
-  color: darkblue;
+    font-size: 3vmin;
+    color: darkblue;
 }
 
 .text.small {
-  margin-bottom: -2vmin;
+    margin-bottom: -2vmin;
 }
 
 .line {
-  width: 75%;
-  border: 1px solid darkblue;
+    width: 75%;
+    border: 1px solid darkblue;
 }
 
 .small-line {
-  width: 35%;
-  border: 1px solid darkblue;
+    width: 35%;
+    border: 1px solid darkblue;
 }
 
 /*PROJECTS SECTION*/
 
 .projects-section {
-  padding-top: 5vmin;
-  padding-bottom: 5vmin;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+    padding-top: 5vmin;
+    padding-bottom: 5vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .projects-title {
-  color: #16a085;
-  font-family: 'Cocon', sans-serif;
-  font-size: 7vmin;
-  margin-top: 0;
-  padding-top: 3vmin;
+    color: #16a085;
+    font-family: 'Cocon', sans-serif;
+    font-size: 7vmin;
+    margin-top: 0;
+    padding-top: 3vmin;
 }
 
 .project-container {
-  width: 75%;
-  background-color: lightgrey;
-  border: solid #16a085;
-  border-radius: 3vmin;
-  position: relative;
-  margin-bottom: 5vmin;
-  overflow: auto;
-  max-height: 90vmin;
+    width: 75%;
+    background-color: lightgrey;
+    border: solid #16a085;
+    border-radius: 3vmin;
+    position: relative;
+    margin-bottom: 5vmin;
+    overflow: auto;
+    max-height: 90vmin;
 }
 
 .project-title {
-  color: #16a085;
-  font-family: 'Cocon', sans-serif;
-  font-size: 4vmin;
+    color: #16a085;
+    font-family: 'Cocon', sans-serif;
+    font-size: 4vmin;
 }
 
 .project-image {
-  width: 90%;
-  padding-bottom: 6vmin;
-  transition: .5s ease-out;
-  height: auto;
+    width: 90%;
+    padding-bottom: 6vmin;
+    transition: .5s ease-out;
+    height: auto;
 }
 
 .project-text {
-  opacity: 0;
-  color: #16a085;
-  background-color: lightgrey;
-  z-index: 1;
-  font-size: 2vmin;
-  border: solid;
-  border-radius: 1vmin;
-  padding: 1vmin;
-  text-align: center;
-  transition: .5s ease-out;
+    opacity: 0;
+    color: #16a085;
+    background-color: lightgrey;
+    z-index: 1;
+    font-size: 2vmin;
+    border: solid;
+    border-radius: 1vmin;
+    padding: 1vmin;
+    text-align: center;
+    transition: .5s ease-out;
 }
 
 #txt1, #txt2, #txt3, #txt4, #txt5, #txt6 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  top: 15vmin;
-  left: 10%;
-  max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 15vmin;
+    left: 10%;
+    max-width: 80%;
 }
 
 #project2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #project1:hover > #img1 {
-  filter: brightness(15%);
-  transition: .5s ease;
+    filter: brightness(15%);
+    transition: .5s ease;
 }
 
 #project2:hover > #img2 {
-  filter: brightness(33%);
-  transition: .5s ease;
+    filter: brightness(33%);
+    transition: .5s ease;
 }
 
 #project3:hover > #img3 {
-  filter: brightness(33%);
-  transition: .5s ease;
+    filter: brightness(33%);
+    transition: .5s ease;
 }
 
 #project4:hover > #img4 {
-  filter: brightness(33%);
-  transition: .5s ease;
+    filter: brightness(33%);
+    transition: .5s ease;
 }
 
 #project5:hover > #img5 {
-  filter: brightness(33%);
-  transition: .5s ease;
+    filter: brightness(33%);
+    transition: .5s ease;
 }
 
 #project6:hover > #img6 {
-  filter: brightness(33%);
-  transition: .5s ease;
+    filter: brightness(33%);
+    transition: .5s ease;
 }
 
 #project1:hover > #txt1 p {
-  opacity: 1;
-  transition: .5s ease
+    opacity: 1;
+    transition: .5s ease
 }
 
 #project2:hover > #txt2 p {
-  opacity: 1;
-  transition: .5s ease
+    opacity: 1;
+    transition: .5s ease
 }
 
 #project3:hover > #txt3 p {
-  opacity: 1;
-  transition: .5s ease
+    opacity: 1;
+    transition: .5s ease
 }
 
 #project4:hover > #txt4 p {
-  opacity: 1;
-  transition: .5s ease
+    opacity: 1;
+    transition: .5s ease
 }
 
 #project5:hover > #txt5 p {
-  opacity: 1;
-  transition: .5s ease
+    opacity: 1;
+    transition: .5s ease
 }
 
 #project6:hover > #txt6 p {
-  opacity: 1;
-  transition: .5s ease
+    opacity: 1;
+    transition: .5s ease
 }
