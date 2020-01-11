@@ -66,8 +66,9 @@ class App extends Component {
 
             var cw = wordArray[currentWord];
             words[currentWord].style.display = 'none';
-            var nw = currentWord === words.length-1 ? wordArray[0] : wordArray[currentWord+1];
-            words[currentWord].style.display = 'inline';
+            var nextWord = currentWord === words.length-1 ? 0 : currentWord+1;
+            var nw = wordArray[nextWord];
+            words[nextWord].style.display = 'inline';
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
             }
