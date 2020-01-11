@@ -36,7 +36,8 @@ class App extends Component {
         this.state = {
             cv: cv_fr,
             dl_cv: cv_fr_pdf,
-            strings: strings_fr
+            strings: strings_fr,
+            email: strings_fr.email
         };
         this.copyToClipboard = this.copyToClipboard.bind(this);
         App.scrollTop = App.scrollTop.bind(this);
@@ -217,7 +218,7 @@ class App extends Component {
     }
 
     render() {
-        const { cv, dl_cv, strings } = this.state;
+        const { cv, dl_cv, strings, email } = this.state;
         let ukFlagStyle, frFlagStyle;
         if (strings === strings_en) {
             ukFlagStyle = {
@@ -241,7 +242,7 @@ class App extends Component {
                 <header className="header" id="header">
                     <div className="top-logos">
                         <div id="email-logo" onClick={this.copyToClipboard}>
-                            <p id="email-txt">{strings.email}</p>
+                            <p id="email-txt">{email}</p>
                             <img src={mailLogo} className="small-logo" alt="mail_logo"/>
                         </div>
                         <a href="https://github.com/guilln">
