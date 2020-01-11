@@ -290,9 +290,9 @@ class App extends Component {
                         <img src={logo} className="main-logo" alt="logo" />
                         <h1 className="title">Guillaume Naassan</h1>
                         <div className="subtitle-first">
+                            <span className="word pomegranate">Video Game</span>
                             <span className="word green">Full-Stack Web</span>
                             <span className="word wisteria">Software</span>
-                            <span className="word pomegranate">Video Game</span>
                             <span className="subtitle">Developer</span>
                         </div>
                         <img src={chevron} alt="arrow_down" className="small-logo" onClick={App.scrollDown}/>
