@@ -65,14 +65,15 @@ class App extends Component {
         function changeWord() {
 
             var cw = wordArray[currentWord];
-            words[currentWord].style.display = 'none';
+
             var nextWord = currentWord === words.length-1 ? 0 : currentWord+1;
             var nw = wordArray[nextWord];
             words[nextWord].style.display = 'inline';
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
             }
-
+            words[currentWord].style.display = 'none';
+            words[nextWord].style.display = 'inline';
             for (var i = 0; i < nw.length; i++) {
                 if (nw[i].innerHTML === 'k') {
                     nw[i].className = 'letter behind space';
