@@ -73,9 +73,12 @@ class App extends Component {
             var nw = letters[nextWord];
 
             for (var i = 0; i < cw.length; i++) {
-                animateLetterOut(cw, i);
+                animateLetterOut(cw, i, nw);
             }
 
+        }
+
+        function changeWordNext(nw) {
             for (var i = 0; i < nw.length; i++) {
                 if (nw[i].innerHTML === 'k') {
                     nw[i].className = 'letter behind space';
@@ -85,9 +88,10 @@ class App extends Component {
                 nw[0].parentElement.style.opacity = 1;
                 animateLetterIn(nw, i);
             }
+
         }
 
-        function animateLetterOut(cw, i) {
+        function animateLetterOut(cw, i, nw) {
             setTimeout(function() {
                 if (cw[i].innerHTML === 'k') {
                     cw[i].className = 'letter out space';
@@ -103,7 +107,8 @@ class App extends Component {
                         currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         words[currentWord].style.display = 'inline';
-                    }, 2000);
+                        changeWordNext(nw)
+                    }, 500);
                 }
             }, i*80);
         }
