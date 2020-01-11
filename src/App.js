@@ -74,10 +74,7 @@ class App extends Component {
 
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
-                if (i === cw.length-1) {
-                    console.log(`Hiding word: ${words[currentWord].innerHTML}`);
-                    words[currentWord].style.display = 'none';
-                }
+
             }
 
             console.log(`Displaying word: ${words[nextWord].innerHTML}`);
@@ -101,7 +98,12 @@ class App extends Component {
                 } else {
                     cw[i].className = 'letter out';
                 }
-                console.log(`Letter ${cw[i].innerHTML} is out`);
+                console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
+                console.log(`Length of current word ${cw.length}`);
+                if (i === cw.length-1) {
+                    console.log(`Hiding word: ${words[currentWord].innerHTML}`);
+                    words[currentWord].style.display = 'none';
+                }
             }, i*80);
         }
 
