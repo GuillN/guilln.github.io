@@ -55,11 +55,9 @@ class App extends Component {
         var currentWord = 0;
 
 
+        hideWords();
         words[currentWord].style.opacity = 1;
         for (var i = 0; i < words.length; i++) {
-            if (i !== 0) {
-                words[i].className = 'word invisible'
-            }
             splitLetters(words[i]);
         }
 
@@ -103,6 +101,7 @@ class App extends Component {
         }
 
         function splitLetters(word) {
+            word.style.display = 'inline';
             var content = word.innerHTML;
             word.innerHTML = '';
             var letters = [];
@@ -121,10 +120,9 @@ class App extends Component {
             wordArray.push(letters);
         }
 
-        function displayWord() {
-            var cw = wordArray[currentWord];
-            for (let i = 0; i < wordArray.length; i++) {
-
+        function hideWords() {
+            for (let i = 1; i < words.length; i++) {
+                words[i].setAttribute('display', 'none')
             }
         }
 

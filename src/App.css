@@ -43,7 +43,7 @@ a {
 }
 
 .subtitle {
-    padding-left: 6em;
+    /*padding-left: 6em;*/
     font-family: 'Cocon', sans-serif;
     font-size: 5vmin;
     color: #61dafb;
