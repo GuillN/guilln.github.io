@@ -103,7 +103,7 @@ class App extends Component {
                     console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                     words[currentWord].style.display = 'inline';
                 }
-            }, i*80);
+            }, 740+(i*80));
         }
 
         function animateLetterIn(nw, i) {
