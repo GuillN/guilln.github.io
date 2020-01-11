@@ -77,8 +77,7 @@ class App extends Component {
 
             }
 
-            console.log(`Displaying word: ${words[nextWord].innerHTML}`);
-            words[nextWord].style.display = 'inline';
+
             for (var i = 0; i < nw.length; i++) {
                 if (nw[i].innerHTML === 'k') {
                     nw[i].className = 'letter behind space';
@@ -88,7 +87,6 @@ class App extends Component {
                 nw[0].parentElement.style.opacity = 1;
                 animateLetterIn(nw, i);
             }
-            currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
         }
 
         function animateLetterOut(cw, i) {
@@ -103,6 +101,7 @@ class App extends Component {
                 if (i === cw.length-1) {
                     console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                     words[currentWord].style.display = 'none';
+                    currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
                 }
             }, i*80);
         }
@@ -115,6 +114,10 @@ class App extends Component {
                     nw[i].className = 'letter in';
                 }
                 console.log(`Letter ${nw[i].innerHTML} is in`);
+                if (i === nw.length-1) {
+                    console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                    words[currentWord].style.display = 'inline';
+                }
             }, 740+(i*80));
         }
 
