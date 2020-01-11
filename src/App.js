@@ -62,8 +62,11 @@ class App extends Component {
         }
 
         function changeWord() {
+
             var cw = wordArray[currentWord];
+            cw.style.display = 'none';
             var nw = currentWord === words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+            nw.style.display = 'inline';
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
             }
@@ -101,7 +104,7 @@ class App extends Component {
         }
 
         function splitLetters(word) {
-            word.style.display = 'inline';
+
             var content = word.innerHTML;
             word.innerHTML = '';
             var letters = [];
