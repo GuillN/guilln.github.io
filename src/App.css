@@ -43,26 +43,20 @@ a {
 }
 
 .subtitle {
-    /*padding-left: 6em;*/
+    padding-left: 1em;
     font-family: 'Cocon', sans-serif;
     font-size: 5vmin;
     color: #61dafb;
 }
 
 .subtitle-first {
-    margin-bottom: 3em;
+    margin-bottom: .3em;
 }
 
 .word {
-    /*position: absolute;*/
-    /*max-width: 350px;*/
     opacity: 0;
     font-family: 'Cocon', sans-serif;
     font-size: 5vmin;
-}
-
-.invisible {
-    display: none
 }
 
 .letter {
@@ -105,7 +99,6 @@ a {
 
 .wisteria {
     color: #8e44ad;
-    margin-left: 1.5em;
 }
 
 .belize {
@@ -118,7 +111,6 @@ a {
 
 .green {
     color: #16a085;
-    margin-left: -1.5em;
 }
 
 .midnight {

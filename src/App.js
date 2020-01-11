@@ -50,12 +50,12 @@ class App extends Component {
     }
 
     componentDidMount() {
+        console.log('Animation start');
+        hideWords();
         var words = document.getElementsByClassName('word');
         var letters = [];
         var currentWord = 0;
 
-        console.log('Animation start');
-        hideWords();
         words[currentWord].style.opacity = 1;
         words[currentWord].style.display = 'inline';
 
@@ -74,9 +74,7 @@ class App extends Component {
 
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
-
             }
-
 
             for (var i = 0; i < nw.length; i++) {
                 if (nw[i].innerHTML === 'k') {
@@ -116,7 +114,7 @@ class App extends Component {
                     nw[i].className = 'letter in';
                 }
                 console.log(`Letter ${nw[i].innerHTML} is in`);
-            }, 740+(i*80));
+            }, i*80);
         }
 
         function splitLetters(word) {
@@ -135,7 +133,6 @@ class App extends Component {
                 word.appendChild(letter);
                 lettersArray.push(letter);
             }
-
             letters.push(lettersArray);
         }
 
