@@ -102,6 +102,8 @@ class App extends Component {
                     console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                     words[currentWord].style.display = 'none';
                     currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
+                    console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                    words[currentWord].style.display = 'inline';
                 }
             }, i*80);
         }
@@ -114,10 +116,6 @@ class App extends Component {
                     nw[i].className = 'letter in';
                 }
                 console.log(`Letter ${nw[i].innerHTML} is in`);
-                if (i === nw.length-1) {
-                    console.log(`Displaying word: ${words[currentWord].innerHTML}`);
-                    words[currentWord].style.display = 'inline';
-                }
             }, 740+(i*80));
         }
 
