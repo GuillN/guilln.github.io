@@ -54,8 +54,12 @@ class App extends Component {
         var wordArray = [];
         var currentWord = 0;
 
+
         words[currentWord].style.opacity = 1;
         for (var i = 0; i < words.length; i++) {
+            if (i !== 0) {
+                words[i].className = 'word invisible'
+            }
             splitLetters(words[i]);
         }
 
@@ -115,6 +119,13 @@ class App extends Component {
             }
 
             wordArray.push(letters);
+        }
+
+        function displayWord() {
+            var cw = wordArray[currentWord];
+            for (let i = 0; i < wordArray.length; i++) {
+
+            }
         }
 
         changeWord();
