@@ -50,12 +50,12 @@ class App extends Component {
     }
 
     componentDidMount() {
-        console.log('Animation start');
-        hideWords();
         var words = document.getElementsByClassName('word');
         var letters = [];
         var currentWord = 0;
 
+        console.log('Animation start');
+        hideWords();
         words[currentWord].style.opacity = 1;
         words[currentWord].style.display = 'inline';
 
