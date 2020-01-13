@@ -106,29 +106,34 @@ class App extends Component {
                 if (i === cw.length-1) {
                     setTimeout(function () {
                         console.log(`Hiding word: ${words[currentWord].innerHTML}`);
-                        for (let i = 0; i < cw.length; i++) {
+                        for (let j = 0; j < cw.length; j++) {
                             // cw[i].classList.toggle('collapsed');
-                            collapseLetter(cw, i)
+                            collapseLetter(cw, j);
+                            if (j === cw.length-1) {
+                                setTimeout(function () {
+                                    currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
+                                    console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                                    changeWordNext(nw)
+                                }, 1000)
+                            }
                         }
                         // words[currentWord].style.display = 'none';
                         //words[currentWord].classList.toggle('collapsed');
                         // words[currentWord].style.maxWidth = '0px';
                         // words[currentWord].style.visibility = 'hidden';
                         // setTimeout(function () {
-                        currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
-                        console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         // for (let i = 0; i < nw.length; i++) {
-                            // nw[i].classList.toggle('collapsed');
-                            // collapseLetter(nw, i)
+                        // nw[i].classList.toggle('collapsed');
+                        // collapseLetter(nw, i)
                         // }
 
                         // words[currentWord].style.display = 'inline';
                         // words[currentWord].classList.toggle('collapsed');
                         // words[currentWord].style.maxWidth = '1000px';
                         // words[currentWord].style.visibility = 'visible';
-                        setTimeout(changeWordNext(nw), 300)
+                        // setTimeout(changeWordNext(nw), 300)
                         // }, 5000)
-                    }, 300)
+                    }, 1000)
                 }
             }, i*80)
         }
@@ -181,7 +186,7 @@ class App extends Component {
         }
 
         changeWord();
-        setInterval(changeWord, 4000);
+        setInterval(changeWord, 16000);
 
         return window.addEventListener('scroll', App.handleScroll)
     }
