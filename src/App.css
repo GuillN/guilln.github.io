@@ -57,9 +57,6 @@ a {
     opacity: 0;
     font-family: 'Cocon', sans-serif;
     font-size: 5vmin;
-    visibility: visible;
-    max-width: 1000px;
-    transition: max-width .3s ease-in;
 }
 
 .letter.collapsed{
@@ -74,6 +71,9 @@ a {
     float: left;
     transform: translateZ(25px);
     transform-origin: 50% 50% 25px;
+    visibility: visible;
+    max-width: 1000px;
+    transition: max-width .3s ease-in;
 }
 
 .letter.space {
