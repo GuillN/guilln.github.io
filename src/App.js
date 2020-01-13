@@ -83,15 +83,21 @@ class App extends Component {
 
         function changeWordNext(nw) {
             for (var i = 0; i < nw.length; i++) {
-                if (nw[i].innerHTML === 'k') {
-                    nw[i].className = 'letter behind space';
-                } else {
-                    nw[i].className = 'letter behind';
-                }
-                nw[0].parentElement.style.opacity = 1;
-                animateLetterIn(nw, i)
+                uncollapseLetter(nw, i)
             }
 
+        }
+
+        function uncollapseLetter(word, i) {
+            setTimeout(function () {
+                if (word[i].innerHTML === 'k') {
+                    word[i].className = 'letter behind space';
+                } else {
+                    word[i].className = 'letter behind';
+                }
+                word[0].parentElement.style.opacity = 1;
+                animateLetterIn(word, i)
+            }, i*80)
         }
 
         function animateLetterOut(cw, i, nw) {
