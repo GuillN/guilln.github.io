@@ -126,7 +126,7 @@ class App extends Component {
                         // words[currentWord].classList.toggle('collapsed');
                         // words[currentWord].style.maxWidth = '1000px';
                         // words[currentWord].style.visibility = 'visible';
-                        changeWordNext(nw)
+                        setTimeout(changeWordNext(nw), 300)
                         // }, 5000)
                     }, 300)
                 }
