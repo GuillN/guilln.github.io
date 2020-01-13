@@ -114,20 +114,20 @@ class App extends Component {
                         //words[currentWord].classList.toggle('collapsed');
                         // words[currentWord].style.maxWidth = '0px';
                         // words[currentWord].style.visibility = 'hidden';
-                        setTimeout(function () {
+                        // setTimeout(function () {
                         currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
-                        for (let i = 0; i < nw.length; i++) {
+                        // for (let i = 0; i < nw.length; i++) {
                             // nw[i].classList.toggle('collapsed');
-                            collapseLetter(nw, i)
-                        }
+                            // collapseLetter(nw, i)
+                        // }
 
-                            // words[currentWord].style.display = 'inline';
-                            // words[currentWord].classList.toggle('collapsed');
-                            // words[currentWord].style.maxWidth = '1000px';
-                            // words[currentWord].style.visibility = 'visible';
-                            changeWordNext(nw)
-                        }, 5000)
+                        // words[currentWord].style.display = 'inline';
+                        // words[currentWord].classList.toggle('collapsed');
+                        // words[currentWord].style.maxWidth = '1000px';
+                        // words[currentWord].style.visibility = 'visible';
+                        changeWordNext(nw)
+                        // }, 5000)
                     }, 300)
                 }
             }, i*80)
