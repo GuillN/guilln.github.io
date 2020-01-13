@@ -57,13 +57,13 @@ class App extends Component {
         console.log('Animation start');
         hideWords();
         words[currentWord].style.opacity = 1;
-        //words[currentWord].style.display = 'inline';
-        words[currentWord].style.visibility = 'visible';
+        // words[currentWord].style.display = 'inline';
         words[currentWord].style.maxWidth = '1000px';
-
+        words[currentWord].style.visibility = 'visible';
 
         console.log(`Splitting words into letters ...`);
         for (var i = 0; i < words.length; i++) {
+
             splitLetters(words[i]);
         }
         console.log(`Splitting done`);
@@ -106,13 +106,13 @@ class App extends Component {
                     setTimeout(function () {
                         console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                         // words[currentWord].style.display = 'none';
-                        words[i].style.maxWidth = '0px';
-                        words[i].style.visibility = 'hidden';
+                        words[currentWord].style.maxWidth = '0px';
+                        words[currentWord].style.visibility = 'hidden';
                         currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         // words[currentWord].style.display = 'inline';
-                        words[currentWord].style.visibility = 'visible';
                         words[currentWord].style.maxWidth = '1000px';
+                        words[currentWord].style.visibility = 'visible';
                         changeWordNext(nw)
                     }, 300);
                 }
@@ -152,8 +152,8 @@ class App extends Component {
         function hideWords() {
             console.log('Hiding words...');
             for (let i = 1; i < words.length; i++) {
-                //words[i].style.display = 'none';
-                words[i].style.maxWidth = 0;
+                // words[i].style.display = 'none';
+                words[i].style.maxWidth = '0px';
                 words[i].style.visibility = 'hidden';
                 console.log(`Word: ${words[i].innerHTML} hidden`);
             }
