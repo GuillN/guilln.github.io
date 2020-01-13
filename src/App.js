@@ -89,7 +89,7 @@ class App extends Component {
                     nw[i].className = 'letter behind';
                 }
                 nw[0].parentElement.style.opacity = 1;
-                animateLetterIn(nw, i);
+                animateLetterIn(nw, i)
             }
 
         }
@@ -152,7 +152,7 @@ class App extends Component {
                     setTimeout(() => {
                         currentWord = (currentWord === letters.length - 1) ? 0 : currentWord + 1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
-                        changeWordNext(words[currentWord])
+                        changeWordNext(letters[currentWord])
                     }, 300)
                 }
             }, i*80)
