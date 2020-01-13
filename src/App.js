@@ -106,7 +106,7 @@ class App extends Component {
                     setTimeout(function () {
                         console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                         // words[currentWord].style.display = 'none';
-                        words[i].style.maxWidth = 0;
+                        words[i].style.maxWidth = '0px';
                         words[i].style.visibility = 'hidden';
                         currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
