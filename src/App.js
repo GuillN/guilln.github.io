@@ -127,7 +127,7 @@ class App extends Component {
                         // words[currentWord].style.visibility = 'visible';
                         // setTimeout(changeWordNext(nw), 300)
                         // }, 5000)
-                    }, 1000)
+                    }, 300)
                 }
             }, i*80)
         }
@@ -146,14 +146,14 @@ class App extends Component {
         function collapseLetter(word, i) {
             setTimeout(function () {
                 word[i].classList.toggle('collapsed');
-                console.log(`Letter ${word[i]} collapsed`);
+                console.log(`Letter ${word[i].innerHTML} collapsed`);
                 if (i === word.length-1) {
                     console.log('All letters collapsed');
                     setTimeout(() => {
                         currentWord = (currentWord === letters.length - 1) ? 0 : currentWord + 1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         changeWordNext(words[currentWord])
-                    }, 1000)
+                    }, 300)
                 }
             }, i*80)
         }
