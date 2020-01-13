@@ -106,7 +106,8 @@ class App extends Component {
                     setTimeout(function () {
                         console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                         for (let i = 0; i < cw.length; i++) {
-                            cw[i].classList.toggle('collapsed');
+                            // cw[i].classList.toggle('collapsed');
+                            collapseLetter(cw, i)
                         }
                         // words[currentWord].style.display = 'none';
                         //words[currentWord].classList.toggle('collapsed');
@@ -115,7 +116,8 @@ class App extends Component {
                         currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         for (let i = 0; i < nw.length; i++) {
-                            nw[i].classList.toggle('collapsed');
+                            // nw[i].classList.toggle('collapsed');
+                            collapseLetter(nw, i)
                         }
                         // words[currentWord].style.display = 'inline';
                         // words[currentWord].classList.toggle('collapsed');
@@ -135,6 +137,12 @@ class App extends Component {
                     nw[i].className = 'letter in';
                 }
                 console.log(`Letter ${nw[i].innerHTML} is in`);
+            }, i*80);
+        }
+
+        function collapseLetter(word, i) {
+            setTimeout(function () {
+                word[i].classList.toggle('collapsed')
             }, i*80);
         }
 
