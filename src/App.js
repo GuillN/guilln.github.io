@@ -56,8 +56,6 @@ class App extends Component {
         let firstLoop = true;
 
         console.log('Animation start');
-        // hideWords();
-
         console.log(`Splitting words into letters ...`);
         for (var i = 0; i < words.length; i++) {
 
@@ -164,17 +162,6 @@ class App extends Component {
                 lettersArray.push(letter);
             }
             letters.push(lettersArray);
-        }
-
-        function hideWords() {
-            console.log('Hiding words...');
-            for (let i = 1; i < words.length; i++) {
-                // words[i].style.display = 'none';
-                words[i].classList.toggle('collapsed');
-                // words[i].style.maxWidth = '0px';
-                // words[i].style.visibility = 'hidden';
-                console.log(`Word: ${words[i].innerHTML} hidden`);
-            }
         }
 
         changeWord();
@@ -316,9 +303,9 @@ class App extends Component {
                         <img src={logo} className="main-logo" alt="logo" />
                         <h1 className="title">Guillaume Naassan</h1>
                         <div className="subtitle-first">
-                            <span className="word pomegranate">Video Game</span>
                             <span className="word green">Full-Stack Web</span>
                             <span className="word wisteria">Software</span>
+                            <span className="word pomegranate">Video Game</span>
                             <span className="subtitle">Developer</span>
                         </div>
                         <img src={chevron} alt="arrow_down" className="small-logo" onClick={App.scrollDown}/>
