@@ -100,7 +100,6 @@ class App extends Component {
                 } else {
                     cw[i].className = 'letter out';
                 }
-                collapseLetter(cw, i);
                 console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
                 console.log(`Length of current word ${cw.length}`);
                 if (i === cw.length-1) {
@@ -108,7 +107,7 @@ class App extends Component {
                         console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                         for (let i = 0; i < cw.length; i++) {
                             // cw[i].classList.toggle('collapsed');
-                            // collapseLetter(cw, i)
+                            collapseLetter(cw, i)
                         }
                         // words[currentWord].style.display = 'none';
                         //words[currentWord].classList.toggle('collapsed');
