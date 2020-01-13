@@ -95,7 +95,7 @@ class App extends Component {
         }
 
         function animateLetterOut(cw, i, nw) {
-            setTimeout(function() {
+            setTimeout(() => {
                 if (cw[i].innerHTML === 'k') {
                     cw[i].className = 'letter out space';
                 } else {
@@ -109,13 +109,7 @@ class App extends Component {
                         for (let j = 0; j < cw.length; j++) {
                             // cw[i].classList.toggle('collapsed');
                             collapseLetter(cw, j);
-                            if (j === cw.length-1) {
-                                setTimeout(function () {
-                                    currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
-                                    console.log(`Displaying word: ${words[currentWord].innerHTML}`);
-                                    changeWordNext(nw)
-                                }, 1000)
-                            }
+
                         }
                         // words[currentWord].style.display = 'none';
                         //words[currentWord].classList.toggle('collapsed');
@@ -141,18 +135,25 @@ class App extends Component {
         function animateLetterIn(nw, i) {
             setTimeout(function() {
                 if (nw[i].innerHTML === 'k') {
-                    nw[i].className = 'letter in space';
+                    nw[i].className = 'letter in space'
                 } else {
-                    nw[i].className = 'letter in';
+                    nw[i].className = 'letter in'
                 }
-                console.log(`Letter ${nw[i].innerHTML} is in`);
-            }, i*80);
+                console.log(`Letter ${nw[i].innerHTML} is in`)
+            }, i*80)
         }
 
         function collapseLetter(word, i) {
             setTimeout(function () {
-                word[i].classList.toggle('collapsed')
-            }, i*80);
+                word[i].classList.toggle('collapsed');
+                if (i === word.length-1) {
+                    setTimeout(() => {
+                        currentWord = (currentWord === letters.length - 1) ? 0 : currentWord + 1;
+                        console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                        changeWordNext(words[currentWord])
+                    }, 1000)
+                }
+            }, i*80)
         }
 
         function splitLetters(word) {
@@ -186,7 +187,7 @@ class App extends Component {
         }
 
         changeWord();
-        setInterval(changeWord, 16000);
+        setInterval(changeWord, 8000);
 
         return window.addEventListener('scroll', App.handleScroll)
     }
