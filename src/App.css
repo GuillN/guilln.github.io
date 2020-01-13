@@ -62,7 +62,7 @@ a {
     transition: max-width .3s ease-in;
 }
 
-.word.collapsed{
+.letter.collapsed{
     visibility: hidden;
     max-width: 0;
     transition: max-width .3s ease-in;

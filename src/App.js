@@ -55,8 +55,8 @@ class App extends Component {
         var currentWord = 0;
 
         console.log('Animation start');
-        hideWords();
-        words[currentWord].style.opacity = 1;
+        // hideWords();
+        // words[currentWord].style.opacity = 1;
         // words[currentWord].style.display = 'inline';
         // words[currentWord].style.maxWidth = '1000px';
         // words[currentWord].style.visibility = 'visible';
@@ -105,14 +105,20 @@ class App extends Component {
                 if (i === cw.length-1) {
                     setTimeout(function () {
                         console.log(`Hiding word: ${words[currentWord].innerHTML}`);
+                        for (let i = 0; i < cw.length; i++) {
+                            cw[i].classList.toggle('collapsed');
+                        }
                         // words[currentWord].style.display = 'none';
-                        words[currentWord].classList.toggle('collapsed');
+                        //words[currentWord].classList.toggle('collapsed');
                         // words[currentWord].style.maxWidth = '0px';
                         // words[currentWord].style.visibility = 'hidden';
                         currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                        for (let i = 0; i < nw.length; i++) {
+                            nw[i].classList.toggle('collapsed');
+                        }
                         // words[currentWord].style.display = 'inline';
-                        words[currentWord].classList.toggle('collapsed');
+                        // words[currentWord].classList.toggle('collapsed');
                         // words[currentWord].style.maxWidth = '1000px';
                         // words[currentWord].style.visibility = 'visible';
                         changeWordNext(nw)
@@ -140,9 +146,9 @@ class App extends Component {
             for (var i = 0; i < content.length; i++) {
                 var letter = document.createElement('span');
                 if (content.charAt(i) === 'k') {
-                    letter.className = 'letter space';
+                    letter.className = 'letter collapsed space';
                 } else {
-                    letter.className = 'letter';
+                    letter.className = 'letter collapsed';
                 }
                 letter.innerHTML = content.charAt(i);
                 word.appendChild(letter);
