@@ -47,6 +47,7 @@ a {
     font-family: 'Cocon', sans-serif;
     font-size: 5vmin;
     color: #61dafb;
+    transition: max-width .3s ease-in;
 }
 
 .subtitle-first {
@@ -57,6 +58,7 @@ a {
     opacity: 0;
     font-family: 'Cocon', sans-serif;
     font-size: 5vmin;
+    transition: max-width .3s ease-in;
 }
 
 .letter {
