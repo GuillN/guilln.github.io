@@ -146,7 +146,9 @@ class App extends Component {
         function collapseLetter(word, i) {
             setTimeout(function () {
                 word[i].classList.toggle('collapsed');
+                console.log(`Letter ${word[i]} collapsed`);
                 if (i === word.length-1) {
+                    console.log('All letters collapsed');
                     setTimeout(() => {
                         currentWord = (currentWord === letters.length - 1) ? 0 : currentWord + 1;
                         console.log(`Displaying word: ${words[currentWord].innerHTML}`);
