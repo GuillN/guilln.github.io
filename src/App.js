@@ -68,6 +68,7 @@ class App extends Component {
         }
         console.log(`Splitting done`);
 
+
         function changeWord() {
             console.log(`Changing word ...`);
             var cw = letters[currentWord];
@@ -113,20 +114,23 @@ class App extends Component {
                         //words[currentWord].classList.toggle('collapsed');
                         // words[currentWord].style.maxWidth = '0px';
                         // words[currentWord].style.visibility = 'hidden';
-                        currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
-                        console.log(`Displaying word: ${words[currentWord].innerHTML}`);
-                        for (let i = 0; i < nw.length; i++) {
-                            // nw[i].classList.toggle('collapsed');
-                            collapseLetter(nw, i)
-                        }
-                        // words[currentWord].style.display = 'inline';
-                        // words[currentWord].classList.toggle('collapsed');
-                        // words[currentWord].style.maxWidth = '1000px';
-                        // words[currentWord].style.visibility = 'visible';
-                        changeWordNext(nw)
-                    }, 300);
+                        setTimeout(function () {
+
+                            currentWord = (currentWord === letters.length-1) ? 0 : currentWord+1;
+                            console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                            for (let i = 0; i < nw.length; i++) {
+                                // nw[i].classList.toggle('collapsed');
+                                collapseLetter(nw, i)
+                            }
+                            // words[currentWord].style.display = 'inline';
+                            // words[currentWord].classList.toggle('collapsed');
+                            // words[currentWord].style.maxWidth = '1000px';
+                            // words[currentWord].style.visibility = 'visible';
+                            changeWordNext(nw)
+                        }, 500)
+                    }, 300)
                 }
-            }, i*80);
+            }, i*80)
         }
 
         function animateLetterIn(nw, i) {
@@ -315,9 +319,9 @@ class App extends Component {
                         <img src={logo} className="main-logo" alt="logo" />
                         <h1 className="title">Guillaume Naassan</h1>
                         <div className="subtitle-first">
+                            <span className="word pomegranate">Video Game</span>
                             <span className="word green">Full-Stack Web</span>
                             <span className="word wisteria">Software</span>
-                            <span className="word pomegranate">Video Game</span>
                             <span className="subtitle">Developer</span>
                         </div>
                         <img src={chevron} alt="arrow_down" className="small-logo" onClick={App.scrollDown}/>
