@@ -100,6 +100,7 @@ class App extends Component {
                 } else {
                     cw[i].className = 'letter out';
                 }
+                collapseLetter(cw, i);
                 console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
                 console.log(`Length of current word ${cw.length}`);
                 if (i === cw.length-1) {
@@ -107,7 +108,7 @@ class App extends Component {
                         console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                         for (let i = 0; i < cw.length; i++) {
                             // cw[i].classList.toggle('collapsed');
-                            collapseLetter(cw, i)
+                            // collapseLetter(cw, i)
                         }
                         // words[currentWord].style.display = 'none';
                         //words[currentWord].classList.toggle('collapsed');
@@ -315,9 +316,9 @@ class App extends Component {
                         <img src={logo} className="main-logo" alt="logo" />
                         <h1 className="title">Guillaume Naassan</h1>
                         <div className="subtitle-first">
-                            <span className="word pomegranate">Video Game</span>
                             <span className="word green">Full-Stack Web</span>
                             <span className="word wisteria">Software</span>
+                            <span className="word pomegranate">Video Game</span>
                             <span className="subtitle">Developer</span>
                         </div>
                         <img src={chevron} alt="arrow_down" className="small-logo" onClick={App.scrollDown}/>
