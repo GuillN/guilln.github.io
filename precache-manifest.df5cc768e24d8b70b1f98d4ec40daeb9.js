@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "968aaa24eeffdd779e4fc9c27c5cb730",
-    "url": "/static/media/france.968aaa24.svg"
+    "revision": "f232bb92463ff68903faa854783edf9c",
+    "url": "/static/media/cv_en.f232bb92.png"
   },
   {
-    "revision": "8913c8083470306bacc9",
-    "url": "/static/css/main.9a030250.chunk.css"
+    "revision": "36f3c6c7f26048716389",
+    "url": "/static/css/main.4ff1bde8.chunk.css"
   },
   {
-    "revision": "1dd704c5981fadf5f8ae",
-    "url": "/static/js/1.1dd704c5.chunk.js"
+    "revision": "2ec302e048c2a7f3274a",
+    "url": "/static/js/1.2ec302e0.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -18,10 +18,6 @@ self.__precacheManifest = [
   {
     "revision": "54e3b0e8584f45466b978e95e2329e50",
     "url": "/static/media/curved.54e3b0e8.svg"
-  },
-  {
-    "revision": "b02818be5d534afa6f687e5c27d1f151",
-    "url": "/static/media/classrooms.b02818be.png"
   },
   {
     "revision": "88a2b559628bb685946ef632f0611989",
@@ -60,16 +56,16 @@ self.__precacheManifest = [
     "url": "/static/media/download.dd46779f.svg"
   },
   {
-    "revision": "8913c8083470306bacc9",
-    "url": "/static/js/main.8913c808.chunk.js"
+    "revision": "968aaa24eeffdd779e4fc9c27c5cb730",
+    "url": "/static/media/france.968aaa24.svg"
   },
   {
     "revision": "e5564902e2642c5e6e2e98e68a7d41f5",
     "url": "/static/media/united-kingdom.e5564902.svg"
   },
   {
-    "revision": "f232bb92463ff68903faa854783edf9c",
-    "url": "/static/media/cv_en.f232bb92.png"
+    "revision": "36f3c6c7f26048716389",
+    "url": "/static/js/main.36f3c6c7.chunk.js"
   },
   {
     "revision": "2f169860c01b5cf5e1596884630f495c",
@@ -112,11 +108,23 @@ self.__precacheManifest = [
     "url": "/static/media/website.d22cb338.png"
   },
   {
+    "revision": "b02818be5d534afa6f687e5c27d1f151",
+    "url": "/static/media/classrooms.b02818be.png"
+  },
+  {
+    "revision": "b888276e75e2b87d65557ef67d872d36",
+    "url": "/static/media/emgalai.b888276e.png"
+  },
+  {
+    "revision": "055a1380f38da449e9ef55a5464bce2c",
+    "url": "/static/media/dchroma.055a1380.png"
+  },
+  {
     "revision": "3cb2dc7f975186787930e7b93ee18dc0",
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "c05ad2b1dafa72472076db624bd4d8fd",
+    "revision": "817ff94c2b55934a65658ab488d6ac51",
     "url": "/index.html"
   }
 ];
