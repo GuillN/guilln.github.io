@@ -398,7 +398,7 @@ a {
     transition: .5s ease-out;
 }
 
-#txt1, #txt2, #txt3, #txt4, #txt5, #txt6 {
+#txt1, #txt2, #txt3, #txt4, #txt5, #txt6, #txt7, #txt8 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -444,6 +444,16 @@ a {
     transition: .5s ease;
 }
 
+#project7:hover > #img7 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project8:hover > #img8 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
 #project1:hover > #txt1 p {
     opacity: 1;
     transition: .5s ease
@@ -470,6 +480,16 @@ a {
 }
 
 #project6:hover > #txt6 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project7:hover > #txt7 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project8:hover > #txt8 p {
     opacity: 1;
     transition: .5s ease
 }
