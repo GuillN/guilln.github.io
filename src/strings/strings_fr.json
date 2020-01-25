@@ -37,6 +37,14 @@
     "classrooms": {
       "description": "Project personnel permettant à un professeur de suivre le comportement et le travail de ses élèves tout au long de l'année",
       "tech": "Base de données: MongoDB - Front-end/Back-end: MeteorJS, Blaze template"
+    },
+    "emgalai": {
+      "description": "",
+      "tech": ""
+    },
+    "dchroma": {
+      "description": "",
+      "tech": ""
     }
   }
 }

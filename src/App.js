@@ -14,6 +14,7 @@ import cv_fr_pdf from './images/cv_fr.pdf';
 import cv_en_pdf from './images/cv_en.pdf';
 import isep from './images/iseplogo.png'
 import cnam from './images/cnamlogo.png'
+import upv from './images/upvlogo.png'
 import cirruseo from './images/cirruseo.png'
 import appartoo_logo from './images/appartoo_logo.png'
 import luxo from './images/luxo.png'
@@ -272,6 +273,7 @@ class App extends Component {
                 marginRight: '5vmin',
                 border: 'solid #6981bd'
             };
+
             frFlagStyle = {
                 border: 'transparent'
             }
@@ -392,8 +394,23 @@ class App extends Component {
                             {strings.integration}
                         </p>
                     </div>
+                    <hr className="line"/>
+                    <p className="text">
+                        2019 - 2020<br/>
+                        UPV - Universitat Politècnica de València<br/>
+                        Erasmus
+                    </p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
+                        <img src={upv} alt="upv_logo" className="upv-logo"/>
+                    </a>
+                    <p className="text-green">
+                        {strings.subjects4}
+                    </p>
                     <img src={chevron2} alt="arrow_down" className="small-logo" onClick={App.scrollDownest}/>
                 </section>
+
+
+
                 <section className="projects-section">
                     <h2 className="projects-title">{strings.projects_title}</h2>
                     <div id="project1" className="project-container">
@@ -444,6 +461,22 @@ class App extends Component {
                         <div id="txt6">
                             <p className="project-text">{strings.project.classrooms.description}</p>
                             <p className="project-text">{strings.project.classrooms.tech}</p>
+                        </div>
+                    </div>
+                    <div id="project7" className="project-container">
+                        <h3 className="project-title">Emgalai Grafik</h3>
+                        <img id="img7" className="project-image" src={classrooms} alt="classrooms-img"/>
+                        <div id="txt7">
+                            <p className="project-text">{strings.project.emgalai.description}</p>
+                            <p className="project-text">{strings.project.emgalai.tech}</p>
+                        </div>
+                    </div>
+                    <div id="project8" className="project-container">
+                        <h3 className="project-title">DChroma</h3>
+                        <img id="img8" className="project-image" src={classrooms} alt="classrooms-img"/>
+                        <div id="txt8">
+                            <p className="project-text">{strings.project.dchroma.description}</p>
+                            <p className="project-text">{strings.project.dchroma.tech}</p>
                         </div>
                     </div>
                 </section>

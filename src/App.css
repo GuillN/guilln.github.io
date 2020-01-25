@@ -291,6 +291,14 @@ a {
     padding: 2vmin;
 }
 
+.upv-logo {
+    width: 55vmin;
+    border: solid darkblue;
+    border-radius: 3vmin;
+    background-color: white;
+    padding: 2vmin;
+}
+
 .internship-container {
     display: flex;
     margin-bottom: 5vmin;
