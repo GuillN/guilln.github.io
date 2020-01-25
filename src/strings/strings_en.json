@@ -10,6 +10,7 @@
   "cycle2": "Engineering Course",
   "subjects4": "JavaFX, JavaEE, Spring, NoSQL, PHP, ReactJS",
   "integration": "Continuous integration",
+  "subjects5": "Unity, C#, Data Science, Cybersecurity",
   "projects_title": "Projects",
   "project": {
     "luxo": {
@@ -37,6 +38,14 @@
     "classrooms": {
       "description": "Personal project allowing a teacher to monitor the behaviour and work of their students all year long",
       "tech": "Database: MongoDB - Front-end/Back-end: MeteorJS, Blaze template"
+    },
+    "emgalai": {
+      "description": "Website and online shop for the artist Ëmgalaï Grafik",
+      "tech": "ReactJS"
+    },
+    "dchroma": {
+      "description": "Metroid-like single player video game",
+      "tech": "Unity, C#"
     }
   }
 }

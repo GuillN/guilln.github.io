@@ -9,7 +9,8 @@
   "internship": "Stage",
   "cycle2": "Cycle ingénieur",
   "subjects4": "JavaFX, JavaEE, Spring, NoSQL, PHP, ReactJS",
-  "integration": "Intégration contine",
+  "integration": "Intégration continue",
+  "subjects5": "Unity, C#, Data Science, Cybersécurité",
   "projects_title": "Projets",
   "project": {
     "luxo": {
@@ -39,12 +40,12 @@
       "tech": "Base de données: MongoDB - Front-end/Back-end: MeteorJS, Blaze template"
     },
     "emgalai": {
-      "description": "",
-      "tech": ""
+      "description": "Site et boutique en ligne pour l'artiste Ëmgalaï Grafik",
+      "tech": "ReactJS"
     },
     "dchroma": {
-      "description": "",
-      "tech": ""
+      "description": "Jeu vidéo de type 'metroid-like', un joueur",
+      "tech": "Unity, C#"
     }
   }
 }

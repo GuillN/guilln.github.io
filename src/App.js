@@ -24,6 +24,8 @@ import appartoo from'./images/appartoo.png'
 import monita from './images/monita.png'
 import website from './images/website.png'
 import classrooms from './images/classrooms.png'
+import emgalai from './images/emgalai.png'
+import dchroma from './images/dchroma.png'
 
 import strings_fr from './strings/strings_fr.json'
 import strings_en from './strings/strings_en.json'
@@ -404,7 +406,7 @@ class App extends Component {
                         <img src={upv} alt="upv_logo" className="upv-logo"/>
                     </a>
                     <p className="text-green">
-                        {strings.subjects4}
+                        {strings.subjects5}
                     </p>
                     <img src={chevron2} alt="arrow_down" className="small-logo" onClick={App.scrollDownest}/>
                 </section>
@@ -464,8 +466,8 @@ class App extends Component {
                         </div>
                     </div>
                     <div id="project7" className="project-container">
-                        <h3 className="project-title">Emgalai Grafik</h3>
-                        <img id="img7" className="project-image" src={classrooms} alt="classrooms-img"/>
+                        <h3 className="project-title">Ëmgalaï Grafik</h3>
+                        <img id="img7" className="project-image" src={emgalai} alt="emgalai-img"/>
                         <div id="txt7">
                             <p className="project-text">{strings.project.emgalai.description}</p>
                             <p className="project-text">{strings.project.emgalai.tech}</p>
@@ -473,7 +475,7 @@ class App extends Component {
                     </div>
                     <div id="project8" className="project-container">
                         <h3 className="project-title">DChroma</h3>
-                        <img id="img8" className="project-image" src={classrooms} alt="classrooms-img"/>
+                        <img id="img8" className="project-image" src={dchroma} alt="dchroma-img"/>
                         <div id="txt8">
                             <p className="project-text">{strings.project.dchroma.description}</p>
                             <p className="project-text">{strings.project.dchroma.tech}</p>
