@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/static/media/france.968aaa24.svg"
   },
   {
-    "revision": "86cdefbf7604695bd635",
-    "url": "/static/css/main.78c2a6f5.chunk.css"
+    "revision": "8913c8083470306bacc9",
+    "url": "/static/css/main.9a030250.chunk.css"
   },
   {
-    "revision": "9e0430cd8b6446a40682",
-    "url": "/static/js/1.9e0430cd.chunk.js"
+    "revision": "1dd704c5981fadf5f8ae",
+    "url": "/static/js/1.1dd704c5.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -18,6 +18,10 @@ self.__precacheManifest = [
   {
     "revision": "54e3b0e8584f45466b978e95e2329e50",
     "url": "/static/media/curved.54e3b0e8.svg"
+  },
+  {
+    "revision": "b02818be5d534afa6f687e5c27d1f151",
+    "url": "/static/media/classrooms.b02818be.png"
   },
   {
     "revision": "88a2b559628bb685946ef632f0611989",
@@ -56,8 +60,8 @@ self.__precacheManifest = [
     "url": "/static/media/download.dd46779f.svg"
   },
   {
-    "revision": "86cdefbf7604695bd635",
-    "url": "/static/js/main.86cdefbf.chunk.js"
+    "revision": "8913c8083470306bacc9",
+    "url": "/static/js/main.8913c808.chunk.js"
   },
   {
     "revision": "e5564902e2642c5e6e2e98e68a7d41f5",
@@ -74,6 +78,10 @@ self.__precacheManifest = [
   {
     "revision": "fa0c5684c1b00aef9c7f2ec60aab19db",
     "url": "/static/media/cnamlogo.fa0c5684.png"
+  },
+  {
+    "revision": "b9dce0a2249924b3aa004964d584dec5",
+    "url": "/static/media/upvlogo.b9dce0a2.png"
   },
   {
     "revision": "ec98e66da611feedbaecd2bfa3b1fd1c",
@@ -104,15 +112,11 @@ self.__precacheManifest = [
     "url": "/static/media/website.d22cb338.png"
   },
   {
-    "revision": "b02818be5d534afa6f687e5c27d1f151",
-    "url": "/static/media/classrooms.b02818be.png"
-  },
-  {
     "revision": "3cb2dc7f975186787930e7b93ee18dc0",
     "url": "/static/media/Cocon-RegularTR.3cb2dc7f.ttf"
   },
   {
-    "revision": "43db63777b976e749ffbea2761d77bd5",
+    "revision": "c05ad2b1dafa72472076db624bd4d8fd",
     "url": "/index.html"
   }
 ];
