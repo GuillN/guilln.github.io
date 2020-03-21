@@ -308,7 +308,7 @@ const App = () => {
             <Nav strings={strings} stringsFr={stringsFr} stringsEn={stringsEn} scrollDown={scrollDown}
                 scrollDowner={scrollDowner} scrollDownest={scrollDownest}/>
 
-            <Cv strings={strings} cv={cv} dlCv={dlCv} stringsEn={stringsEn} stribgsFr={stringsFr}
+            <Cv strings={strings} cv={cv} dlCv={dlCv} stringsEn={stringsEn} stringsFr={stringsFr}
                 scrollDowner={scrollDowner}/>
 
             <Schools strings={strings} scrollDownest={scrollDownest}/>
