@@ -270,9 +270,8 @@ a {
 .school-title {
     color: darkblue;
     font-family: 'Cocon', sans-serif;
-    font-size: 7vmin;
-    margin-top: 0;
-    padding-top: 3vmin;
+    font-size: 7vh;
+    margin-top: 3vh;
 }
 
 .isep-logo {
@@ -299,9 +298,16 @@ a {
     padding: 2vmin;
 }
 
+.internship-title {
+    font-size: 3vmin;
+    color: darkblue;
+    margin-bottom: 3vh;
+}
+
 .internship-container {
     display: flex;
-    margin-bottom: 5vmin;
+    justify-content: center;
+    align-items: center;
 }
 
 .internship-logo {
@@ -325,10 +331,6 @@ a {
 .text {
     font-size: 3vmin;
     color: darkblue;
-}
-
-.text.small {
-    margin-bottom: -2vmin;
 }
 
 .line {

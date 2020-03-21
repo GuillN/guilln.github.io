@@ -11,14 +11,14 @@ const School = props => {
             <a target="_blank" rel="noopener noreferrer" href={props.href}>
                 <img src={props.src} alt={`${props.name}_logo`} className={`${props.name}-logo`}/>
             </a>
-            <p className="text small">{props.subj}</p>
-            {props.subj2 === "" ? "" : <p className="text small">{props.subj2}</p>}
+            <p className="text">{props.subj}</p>
+            {props.subj2 === "" ? "" : <p className="text">{props.subj2}</p>}
             {
                 props.internship === "" ? "" :
                     <div>
                         <br/>
                         <hr className="small-line"/>
-                        <p className="text small">{props.internship}: {props.internshipName.toUpperCase()}</p>
+                        <p className="internship-title">{props.internship}: {props.internshipName.toUpperCase()}</p>
                         <div className="internship-container">
                             <a target="_blank" rel="noopener noreferrer" href={props.internshipHref}>
                                 <img src={props.internshipSrc} alt={`${props.internshipName}_logo`} className="internship-logo"/>
