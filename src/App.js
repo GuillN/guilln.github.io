@@ -198,10 +198,6 @@ const App = () => {
         e.target.focus()
     };
 
-    const scrollTop = () => {
-        window.scroll({top: 0, behavior: "smooth"})
-    };
-
     const scrollDown = () => {
         const height = document.getElementById("header").clientHeight;
         window.scroll({top: height, behavior: "smooth"})
@@ -310,7 +306,8 @@ const App = () => {
                 </div>
             </header>
 
-            <Nav lang={strings}/>
+            <Nav strings={strings} stringsFr={stringsFr} stringsEn={stringsEn} scrollDown={scrollDown}
+                 scrollDowner={scrollDowner} scrollDownest={scrollDownest}/>
 
             <Cv strings={strings} cv={cv} dlCv={dlCv} stringsEn={stringsEn} stribgsFr={stringsFr} scrollDowner={scrollDowner}/>
             {/*<section className="cvSection" id="cvSection">*/}
