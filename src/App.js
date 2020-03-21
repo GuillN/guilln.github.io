@@ -32,6 +32,7 @@ import strings_en from './strings/strings_en.json'
 import './App.css';
 import Nav from "./components/nav/nav";
 import Cv from "./components/cv/cv";
+import Schools from "./components/schools/schools";
 
 const App = () => {
 
@@ -305,88 +306,12 @@ const App = () => {
             </header>
 
             <Nav strings={strings} stringsFr={stringsFr} stringsEn={stringsEn} scrollDown={scrollDown}
-                 scrollDowner={scrollDowner} scrollDownest={scrollDownest}/>
+                scrollDowner={scrollDowner} scrollDownest={scrollDownest}/>
 
-            <Cv strings={strings} cv={cv} dlCv={dlCv} stringsEn={stringsEn} stribgsFr={stringsFr} scrollDowner={scrollDowner}/>
+            <Cv strings={strings} cv={cv} dlCv={dlCv} stringsEn={stringsEn} stribgsFr={stringsFr}
+                scrollDowner={scrollDowner}/>
 
-            <section className="schoolSection" id="schoolSection">
-                <h2 className="school-title">Formation</h2>
-                <p className="text">
-                    2013 - 2016<br/>
-                    {strings.school_isep}: Institut Supérieur d'Électronique de Paris<br/>
-                    {strings.cycle}
-                </p>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
-                    <img src={isep} alt="isep_logo" className="isep-logo"/>
-                </a>
-                <p className="text small">{strings.subjects}</p>
-                <p className="text-green">{strings.subjects2}</p>
-                <hr className="line"/>
-                <p className="text">
-                    2016 - 2017<br/>
-                    Conservatoire National des Arts et Métiers
-                </p>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.cnam.fr/">
-                    <img src={cnam} alt="cnam_logo" className="cnam-logo"/>
-                </a>
-                <p className="text-green">
-                    {strings.subjects3}<br/>
-                    <hr className="small-line"/>
-                    {strings.internship}: Cirruseo
-                </p>
-                <div className="internship-container">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.cirruseo.com/">
-                        <img src={cirruseo} alt="cirruseo_logo" className="internship-logo"/>
-                    </a>
-                    <p className="internship-text">
-                        Google Script<br/>
-                        Google Cloud Engine<br/>
-                        NodeJS
-                    </p>
-                </div>
-                <hr className="line"/>
-                <p className="text">
-                    2017 - 2019<br/>
-                    {strings.school_isep}: Institut Supérieur d'Électronique de Paris<br/>
-                    {strings.cycle2}
-                </p>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
-                    <img src={isep} alt="isep_logo" className="isep-logo"/>
-                </a>
-                <p className="text-green">
-                    {strings.subjects4}<br/>
-                    <hr className="small-line"/>
-                    {strings.internship}: Appartoo
-                </p>
-                <div className="internship-container">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.appartoo.com/">
-                        <img src={appartoo_logo} alt="appartoo_logo" className="internship-logo"/>
-                    </a>
-                    <p className="internship-text">
-                        Symfony<br/>
-                        ExpressJS<br/>
-                        AngularJS<br/>
-                        Angular7<br/>
-                        MongoDB<br/>
-                        {strings.integration}
-                    </p>
-                </div>
-                <hr className="line"/>
-                <p className="text">
-                    2019 - 2020<br/>
-                    UPV - Universitat Politècnica de València<br/>
-                    Erasmus
-                </p>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
-                    <img src={upv} alt="upv_logo" className="upv-logo"/>
-                </a>
-                <p className="text-green">
-                    {strings.subjects5}
-                </p>
-                <img src={chevron2} alt="arrow_down" className="small-logo" onClick={scrollDownest}/>
-            </section>
-
-
+            <Schools strings={strings} scrollDownest={scrollDownest}/>
 
             <section className="projects-section">
                 <h2 className="projects-title">{strings.projects_title}</h2>
