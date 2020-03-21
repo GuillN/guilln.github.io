@@ -58,50 +58,58 @@ const Schools = props => {
             {/*    </p>*/}
             {/*</div>*/}
 
-
-
-
-
-
             <hr className="line"/>
-            <p className="text">
-                2017 - 2019<br/>
-                {props.strings.school_isep}: Institut Supérieur d'Électronique de Paris<br/>
-                {props.strings.cycle2}
-            </p>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
-                <img src={isep} alt="isep_logo" className="isep-logo"/>
-            </a>
-            <p className="text-green">
-                {props.strings.subjects4}<br/>
-                <hr className="small-line"/>
-                {props.strings.internship}: Appartoo
-            </p>
-            <div className="internship-container">
-                <a target="_blank" rel="noopener noreferrer" href="https://www.appartoo.com/">
-                    <img src={appartoo_logo} alt="appartoo_logo" className="internship-logo"/>
-                </a>
-                <p className="internship-text">
-                    Symfony<br/>
-                    ExpressJS<br/>
-                    AngularJS<br/>
-                    Angular7<br/>
-                    MongoDB<br/>
-                    {props.strings.integration}
-                </p>
-            </div>
+
+            <School date="2017 - 2019" school={props.strings.school_isep} cycle={props.strings.cycle2}
+                    fullName="Institut Supérieur d'Électronique de Paris" href="https://www.isep.fr/"
+                    src={isep} name="isep" subj={props.strings.subjects4} subj2="" internship={props.strings.internship}
+                    internshipName="appartoo" internshipHref="https://www.appartoo.com/" internshipSrc={appartoo_logo}
+                    internshipText={["Symfony", "ExpressJS", "AngularJS", "Angular7", "MongoDB", "Continuous integration"]}/>
+
+            {/*<p className="text">*/}
+            {/*    2017 - 2019<br/>*/}
+            {/*    {props.strings.school_isep}: Institut Supérieur d'Électronique de Paris<br/>*/}
+            {/*    {props.strings.cycle2}*/}
+            {/*</p>*/}
+            {/*<a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">*/}
+            {/*    <img src={isep} alt="isep_logo" className="isep-logo"/>*/}
+            {/*</a>*/}
+            {/*<p className="text-green">*/}
+            {/*    {props.strings.subjects4}<br/>*/}
+            {/*    <hr className="small-line"/>*/}
+            {/*    {props.strings.internship}: Appartoo*/}
+            {/*</p>*/}
+            {/*<div className="internship-container">*/}
+            {/*    <a target="_blank" rel="noopener noreferrer" href="https://www.appartoo.com/">*/}
+            {/*        <img src={appartoo_logo} alt="appartoo_logo" className="internship-logo"/>*/}
+            {/*    </a>*/}
+            {/*    <p className="internship-text">*/}
+            {/*        Symfony<br/>*/}
+            {/*        ExpressJS<br/>*/}
+            {/*        AngularJS<br/>*/}
+            {/*        Angular7<br/>*/}
+            {/*        MongoDB<br/>*/}
+            {/*        {props.strings.integration}*/}
+            {/*    </p>*/}
+            {/*</div>*/}
             <hr className="line"/>
-            <p className="text">
-                2019 - 2020<br/>
-                UPV - Universitat Politècnica de València<br/>
-                Erasmus
-            </p>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
-                <img src={upv} alt="upv_logo" className="upv-logo"/>
-            </a>
-            <p className="text-green">
-                {props.strings.subjects5}
-            </p>
+
+            <School date="2019 - 2020" school="" cycle="Erasmus"
+                    fullName="UPV - Universitat Politècnica de València" href="https://www.upv.es/"
+                    src={upv} name="upv" subj={props.strings.subjects5} subj2=""
+                    internship="" internshipName="" internshipHref="" internshipSrc="" internshipText=""/>
+
+            {/*<p className="text">*/}
+            {/*    2019 - 2020<br/>*/}
+            {/*    UPV - Universitat Politècnica de València<br/>*/}
+            {/*    Erasmus*/}
+            {/*</p>*/}
+            {/*<a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">*/}
+            {/*    <img src={upv} alt="upv_logo" className="upv-logo"/>*/}
+            {/*</a>*/}
+            {/*<p className="text-green">*/}
+            {/*    {props.strings.subjects5}*/}
+            {/*</p>*/}
             <img src={chevron2} alt="arrow_down" className="small-logo" onClick={props.scrollDownest}/>
         </section>
     )

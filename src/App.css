@@ -318,12 +318,11 @@ a {
     margin-left: 3vmin;
 }
 
-.text {
-    font-size: 3vmin;
-    color: darkblue;
+.internship-text > p {
+    margin-bottom: -1vh;
 }
 
-.text-green {
+.text {
     font-size: 3vmin;
     color: darkblue;
 }

@@ -1,5 +1,4 @@
 import React from "react"
-import cirruseo from "../../images/cirruseo.png";
 
 const School = props => {
     return (
