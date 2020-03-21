@@ -75,10 +75,10 @@ const App = () => {
             for (let i = 0; i < words.length; i++) {
                 splitLetters(words[i])
             }
-            console.log('Splitting done');
+            // console.log('Splitting done');
 
             function changeWord() {
-                console.log('Changing word ...');
+                // console.log('Changing word ...');
                 let cw = letters[currentWord];
                 if (firstLoop) {
                     firstLoop = false;
@@ -98,11 +98,11 @@ const App = () => {
                     } else {
                         cw[i].className = 'letter out';
                     }
-                    console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
+                    // console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
                     // console.log(`Length of current word ${cw.length}`);
                     if (i === cw.length - 1) {
                         setTimeout(function () {
-                            console.log(`Hiding word: ${words[currentWord].innerHTML}`);
+                            // console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                             for (let j = 0; j < cw.length; j++) {
                                 // Step Two : Collapse slided down letters
                                 collapseLetter(cw, j);
@@ -115,12 +115,12 @@ const App = () => {
             function collapseLetter(word, i) {
                 setTimeout(function () {
                     word[i].classList.toggle('collapsed');
-                    console.log(`Letter ${word[i].innerHTML} collapsed`);
+                    // console.log(`Letter ${word[i].innerHTML} collapsed`);
                     if (i === word.length - 1) {
-                        console.log('All letters collapsed');
+                        // console.log('All letters collapsed');
                         setTimeout(() => {
                             currentWord = (currentWord === letters.length - 1) ? 0 : currentWord + 1;
-                            console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                            // console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                             // Step Three : Prepare next word
                             changeWordNext(letters[currentWord])
                         }, 300)
@@ -155,12 +155,12 @@ const App = () => {
                     } else {
                         nw[i].className = 'letter in'
                     }
-                    console.log(`Letter ${nw[i].innerHTML} is in`)
+                    // console.log(`Letter ${nw[i].innerHTML} is in`)
                 }, i * 80)
             }
 
             function splitLetters(word) {
-                console.log(`Splitting letters of word: ${word.innerHTML}`);
+                // console.log(`Splitting letters of word: ${word.innerHTML}`);
                 let content = word.innerHTML;
                 word.innerHTML = '';
                 let lettersArray = [];
@@ -182,20 +182,8 @@ const App = () => {
             setInterval(changeWord, 8000);
             window.addEventListener('scroll', handleScroll);
             isInitialMount.current = false
-
-            // return function unmount() {
-            //     clearInterval(interval);
-            //     window.removeEventListener('scroll', handleScroll)
-            // }
-        } else {
-            console.log('DO NOT SPEAK')
         }
     });
-
-    // componentWillUnmount() {
-    //     clearInterval(this.interval);
-    //     return window.removeEventListener('scroll', App.handleScroll)
-    // }
 
     const copyToClipboard = e => {
         // Copy text
@@ -276,14 +264,12 @@ const App = () => {
     };
 
     const stringsEn = () => {
-        // this.setState({strings: strings_en, dl_cv: cv_en_pdf, cv: cv_en})
         setStrings(strings_en);
         setCv(cv_en);
         setDlCv(cv_en_pdf)
     };
 
     const stringsFr = () => {
-        // this.setState({strings: strings_fr, dl_cv: cv_fr_pdf, cv: cv_fr})
         setStrings(strings_fr);
         setCv(cv_fr);
         setDlCv(cv_fr_pdf)
@@ -322,22 +308,7 @@ const App = () => {
                  scrollDowner={scrollDowner} scrollDownest={scrollDownest}/>
 
             <Cv strings={strings} cv={cv} dlCv={dlCv} stringsEn={stringsEn} stribgsFr={stringsFr} scrollDowner={scrollDowner}/>
-            {/*<section className="cvSection" id="cvSection">*/}
-            {/*    <div className="dlCv">*/}
-            {/*        <img src={cv} alt="cv" className="cv"/>*/}
-            {/*        <div className="dl">*/}
-            {/*            <a href={dl_cv} className="texts">*/}
-            {/*                <p className="dl-txt">{strings.download}</p>*/}
-            {/*                <img src={dl} alt="dl" className="dl-icon"/>*/}
-            {/*            </a>*/}
-            {/*            <div className="flags">*/}
-            {/*                <img src={uk} alt="uk_flag" className="flag" onClick={App.stringsEn} style={ukFlagStyle}/>*/}
-            {/*                <img src={fr} alt="fr_flag" className="flag" onClick={App.stringsFr} style={frFlagStyle}/>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <img src={chevron1} alt="arrow_down" className="small-logo" onClick={App.scrollDowner}/>*/}
-            {/*</section>*/}
+
             <section className="schoolSection" id="schoolSection">
                 <h2 className="school-title">Formation</h2>
                 <p className="text">
