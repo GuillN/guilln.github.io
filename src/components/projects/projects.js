@@ -7,19 +7,21 @@ import website from "../../images/website.png";
 import classrooms from "../../images/classrooms.png";
 import emgalai from "../../images/emgalai.png";
 import dchroma from "../../images/dchroma.png";
+import Project from "./project";
 
 const Projects = props =>{
     return (
         <section className="projects-section">
             <h2 className="projects-title">{props.strings.projects_title}</h2>
-            <div id="project1" className="project-container">
-                <h3 className="project-title">Luxo</h3>
-                <img id="img1" className="project-image" src={luxo} alt="luxo-img"/>
-                <div id="txt1">
-                    <p className="project-text">{props.strings.project.luxo.description}</p>
-                    <p className="project-text">{props.strings.project.luxo.tech}</p>
-                </div>
-            </div>
+            <Project id={1} name='luxo' src={luxo} desc={props.strings.luxo.description} tech={props.strings.luxo.tech}/>
+            {/*<div id="project1" className="project-container">*/}
+            {/*    <h3 className="project-title">Luxo</h3>*/}
+            {/*    <img id="img1" className="project-image" src={luxo} alt="luxo-img"/>*/}
+            {/*    <div id="txt1">*/}
+            {/*        <p className="project-text">{props.strings.project.luxo.description}</p>*/}
+            {/*        <p className="project-text">{props.strings.project.luxo.tech}</p>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div id="project2" className="project-container">
                 <h3 className="project-title">Snorkunking</h3>
                 <img id="img2" className="project-image" src={snork2} alt="snork-img-2"/>
