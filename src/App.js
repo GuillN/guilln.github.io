@@ -63,7 +63,7 @@ const App = () => {
 
     useEffect(() => {
 
-        if (!isInitialMount.current) {
+        if (isInitialMount.current) {
 
             let words = document.getElementsByClassName('word');
             let letters = [];
