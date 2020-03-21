@@ -26,7 +26,7 @@ const School = props => {
                             </a>
                             <p className="internship-text">
                                 {props.internshipText.map(item => {
-                                    return {item}
+                                    return <p>{item}</p>
                                 })}
                             </p>
                         </div>
