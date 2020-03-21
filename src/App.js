@@ -66,11 +66,16 @@ const App = () => {
         let currentWord = 0;
         let firstLoop = true;
 
+        console.log('Animation start');
+        console.log('Splitting words into letters ...');
         for (let i = 0; i < words.length; i++) {
+            console.log(`Word ${i}: ${words[i]}`);
             splitLetters(words[i])
         }
+        console.log('Splitting done');
 
         function changeWord() {
+            console.log('Changing word ...');
             let cw = letters[currentWord];
             if(firstLoop) {
                 firstLoop = false;
@@ -90,11 +95,11 @@ const App = () => {
                 } else {
                     cw[i].className = 'letter out';
                 }
-                // console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
-                // console.log(`Length of current word ${cw.length}`);
+                console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
+                console.log(`Length of current word ${cw.length}`);
                 if (i === cw.length-1) {
                     setTimeout(function () {
-                        // console.log(`Hiding word: ${words[currentWord].innerHTML}`);
+                        console.log(`Hiding word: ${words[currentWord].innerHTML}`);
                         for (let j = 0; j < cw.length; j++) {
                             // Step Two : Collapse slided down letters
                             collapseLetter(cw, j);
@@ -107,12 +112,12 @@ const App = () => {
         function collapseLetter(word, i) {
             setTimeout(function () {
                 word[i].classList.toggle('collapsed');
-                // console.log(`Letter ${word[i].innerHTML} collapsed`);
+                console.log(`Letter ${word[i].innerHTML} collapsed`);
                 if (i === word.length-1) {
-                    // console.log('All letters collapsed');
+                    console.log('All letters collapsed');
                     setTimeout(() => {
                         currentWord = (currentWord === letters.length - 1) ? 0 : currentWord + 1;
-                        // console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                        console.log(`Displaying word: ${words[currentWord].innerHTML}`);
                         // Step Three : Prepare next word
                         changeWordNext(letters[currentWord])
                     }, 300)
@@ -152,7 +157,7 @@ const App = () => {
         }
 
         function splitLetters(word) {
-            // console.log(`Splitting letters of word: ${word.innerHTML}`);
+            console.log(`Splitting letters of word: ${word.innerHTML}`);
             let content = word.innerHTML;
             word.innerHTML = '';
             let lettersArray = [];
