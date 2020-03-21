@@ -1,59 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './App.css';
+
 import logo from './images/curved.svg';
 import mailLogo from './images/mail.svg';
 import gitLogo from './images/bluegithub.svg';
 import chevron from './images/chevron-arrow-down.svg';
-import chevron1 from './images/darker-chevron-arrow-down.svg';
-import chevron2 from './images/darkest-chevron-arrow-down.svg';
-import dl from './images/download.svg'
-import fr from './images/france.svg';
-import uk from './images/united-kingdom.svg';
 import cv_fr from './images/cv_fr.png';
 import cv_en from './images/cv_en.png';
 import cv_fr_pdf from './images/cv_fr.pdf';
 import cv_en_pdf from './images/cv_en.pdf';
-import isep from './images/iseplogo.png'
-import cnam from './images/cnamlogo.png'
-import upv from './images/upvlogo.png'
-import cirruseo from './images/cirruseo.png'
-import appartoo_logo from './images/appartoo_logo.png'
-import luxo from './images/luxo.png'
-// import snork1 from './images/snorkunking_menu.PNG'
-import snork2 from './images/snorkunking_ig.PNG'
-import appartoo from'./images/appartoo.png'
-import monita from './images/monita.png'
-import website from './images/website.png'
-import classrooms from './images/classrooms.png'
-import emgalai from './images/emgalai.png'
-import dchroma from './images/dchroma.png'
-
 import strings_fr from './strings/strings_fr.json'
 import strings_en from './strings/strings_en.json'
-import './App.css';
+
 import Nav from "./components/nav/nav";
 import Cv from "./components/cv/cv";
 import Schools from "./components/schools/schools";
+import Projects from "./components/projects/projects";
 
 const App = () => {
-
-
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //         cv: cv_fr,
-    //         dl_cv: cv_fr_pdf,
-    //         strings: strings_fr,
-    //         email: strings_fr.email
-    //     };
-    //     this.copyToClipboard = this.copyToClipboard.bind(this);
-    //     App.scrollTop = App.scrollTop.bind(this);
-    //     App.scrollDown = App.scrollDown.bind(this);
-    //     App.scrollDowner = App.scrollDowner.bind(this);
-    //     App.scrollDownest = App.scrollDownest.bind(this);
-    //     App.handleScroll = App.handleScroll.bind(this);
-    //     App.stringsEn = App.stringsEn.bind(this);
-    //     App.stringsFr = App.stringsFr.bind(this);
-    // }
 
     const [cv, setCv] = useState(cv_fr);
     const [dlCv, setDlCv] = useState(cv_fr_pdf);
@@ -188,7 +152,6 @@ const App = () => {
 
     const copyToClipboard = e => {
         // Copy text
-        // this.setState({email: 'Copied !'});
         setEmail('Copied !');
         const textField = document.createElement('textarea');
         textField.innerText = 'gnaassan@gmail.com';
@@ -276,7 +239,6 @@ const App = () => {
         setDlCv(cv_fr_pdf)
     };
 
-
     return (
         <div className="main">
             <header className="header" id="header">
@@ -306,82 +268,15 @@ const App = () => {
             </header>
 
             <Nav strings={strings} stringsFr={stringsFr} stringsEn={stringsEn} scrollDown={scrollDown}
-                scrollDowner={scrollDowner} scrollDownest={scrollDownest}/>
+                 scrollDowner={scrollDowner} scrollDownest={scrollDownest}/>
 
             <Cv strings={strings} cv={cv} dlCv={dlCv} stringsEn={stringsEn} stringsFr={stringsFr}
                 scrollDowner={scrollDowner}/>
 
             <Schools strings={strings} scrollDownest={scrollDownest}/>
 
-            <section className="projects-section">
-                <h2 className="projects-title">{strings.projects_title}</h2>
-                <div id="project1" className="project-container">
-                    <h3 className="project-title">Luxo</h3>
-                    <img id="img1" className="project-image" src={luxo} alt="luxo-img"/>
-                    <div id="txt1">
-                        <p className="project-text">{strings.project.luxo.description}</p>
-                        <p className="project-text">{strings.project.luxo.tech}</p>
-                    </div>
-                </div>
-                <div id="project2" className="project-container">
-                    <h3 className="project-title">Snorkunking</h3>
-                    <img id="img2" className="project-image" src={snork2} alt="snork-img-2"/>
-                    <div id="txt2">
-                        <p className="project-text">{strings.project.snorkunking.description}</p>
-                        <p className="project-text">{strings.project.snorkunking.tech}</p>
-                    </div>
-                </div>
-                <div id="project3" className="project-container">
-                    <h3 className="project-title">Appartoo</h3>
-                    <img id="img3" className="project-image" src={appartoo} alt="appartoo-img"/>
-                    <div id="txt3">
-                        <p className="project-text">{strings.project.appartoo.description}</p>
-                        <p className="project-text">{strings.project.appartoo.tech}</p>
-                        <p className="project-text">{strings.project.appartoo.description2}</p>
-                        <p className="project-text">{strings.project.appartoo.tech2}</p>
-                    </div>
-                </div>
-                <div id="project4" className="project-container">
-                    <h3 className="project-title">Monita</h3>
-                    <img id="img4" className="project-image" src={monita} alt="monita-img"/>
-                    <div id="txt4">
-                        <p className="project-text">{strings.project.monita.description}</p>
-                        <p className="project-text">{strings.project.monita.tech}</p>
-                    </div>
-                </div>
-                <div id="project5" className="project-container">
-                    <h3 className="project-title">Portfolio</h3>
-                    <img id="img5" className="project-image" src={website} alt="website-img"/>
-                    <div id="txt5">
-                        <p className="project-text">{strings.project.website.description}</p>
-                        <p className="project-text">{strings.project.website.tech}</p>
-                    </div>
-                </div>
-                <div id="project6" className="project-container">
-                    <h3 className="project-title">Classrooms</h3>
-                    <img id="img6" className="project-image" src={classrooms} alt="classrooms-img"/>
-                    <div id="txt6">
-                        <p className="project-text">{strings.project.classrooms.description}</p>
-                        <p className="project-text">{strings.project.classrooms.tech}</p>
-                    </div>
-                </div>
-                <div id="project7" className="project-container">
-                    <h3 className="project-title">Ëmgalaï Grafik</h3>
-                    <img id="img7" className="project-image" src={emgalai} alt="emgalai-img"/>
-                    <div id="txt7">
-                        <p className="project-text">{strings.project.emgalai.description}</p>
-                        <p className="project-text">{strings.project.emgalai.tech}</p>
-                    </div>
-                </div>
-                <div id="project8" className="project-container">
-                    <h3 className="project-title">DChroma</h3>
-                    <img id="img8" className="project-image" src={dchroma} alt="dchroma-img"/>
-                    <div id="txt8">
-                        <p className="project-text">{strings.project.dchroma.description}</p>
-                        <p className="project-text">{strings.project.dchroma.tech}</p>
-                    </div>
-                </div>
-            </section>
+            <Projects strings={strings}/>
+
         </div>
     );
 };
