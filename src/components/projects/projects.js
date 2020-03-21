@@ -13,74 +13,31 @@ const Projects = props => {
     return (
         <section className="projects-section">
             <h2 className="projects-title">{props.strings.projects_title}</h2>
+
             <Project id={1} name='luxo' src={luxo} desc={props.strings.project.luxo.description}
-                     tech={props.strings.project.luxo.tech}/>
-            {/*<div id="project1" className="project-container">*/}
-            {/*    <h3 className="project-title">Luxo</h3>*/}
-            {/*    <img id="img1" className="project-image" src={luxo} alt="luxo-img"/>*/}
-            {/*    <div id="txt1">*/}
-            {/*        <p className="project-text">{props.strings.project.luxo.description}</p>*/}
-            {/*        <p className="project-text">{props.strings.project.luxo.tech}</p>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-            <div id="project2" className="project-container">
-                <h3 className="project-title">Snorkunking</h3>
-                <img id="img2" className="project-image" src={snork2} alt="snork-img-2"/>
-                <div id="txt2">
-                    <p className="project-text">{props.strings.project.snorkunking.description}</p>
-                    <p className="project-text">{props.strings.project.snorkunking.tech}</p>
-                </div>
-            </div>
-            <div id="project3" className="project-container">
-                <h3 className="project-title">Appartoo</h3>
-                <img id="img3" className="project-image" src={appartoo} alt="appartoo-img"/>
-                <div id="txt3">
-                    <p className="project-text">{props.strings.project.appartoo.description}</p>
-                    <p className="project-text">{props.strings.project.appartoo.tech}</p>
-                    <p className="project-text">{props.strings.project.appartoo.description2}</p>
-                    <p className="project-text">{props.strings.project.appartoo.tech2}</p>
-                </div>
-            </div>
-            <div id="project4" className="project-container">
-                <h3 className="project-title">Monita</h3>
-                <img id="img4" className="project-image" src={monita} alt="monita-img"/>
-                <div id="txt4">
-                    <p className="project-text">{props.strings.project.monita.description}</p>
-                    <p className="project-text">{props.strings.project.monita.tech}</p>
-                </div>
-            </div>
-            <div id="project5" className="project-container">
-                <h3 className="project-title">Portfolio</h3>
-                <img id="img5" className="project-image" src={website} alt="website-img"/>
-                <div id="txt5">
-                    <p className="project-text">{props.strings.project.website.description}</p>
-                    <p className="project-text">{props.strings.project.website.tech}</p>
-                </div>
-            </div>
-            <div id="project6" className="project-container">
-                <h3 className="project-title">Classrooms</h3>
-                <img id="img6" className="project-image" src={classrooms} alt="classrooms-img"/>
-                <div id="txt6">
-                    <p className="project-text">{props.strings.project.classrooms.description}</p>
-                    <p className="project-text">{props.strings.project.classrooms.tech}</p>
-                </div>
-            </div>
-            <div id="project7" className="project-container">
-                <h3 className="project-title">Ëmgalaï Grafik</h3>
-                <img id="img7" className="project-image" src={emgalai} alt="emgalai-img"/>
-                <div id="txt7">
-                    <p className="project-text">{props.strings.project.emgalai.description}</p>
-                    <p className="project-text">{props.strings.project.emgalai.tech}</p>
-                </div>
-            </div>
-            <div id="project8" className="project-container">
-                <h3 className="project-title">DChroma</h3>
-                <img id="img8" className="project-image" src={dchroma} alt="dchroma-img"/>
-                <div id="txt8">
-                    <p className="project-text">{props.strings.project.dchroma.description}</p>
-                    <p className="project-text">{props.strings.project.dchroma.tech}</p>
-                </div>
-            </div>
+                     tech={props.strings.project.luxo.tech} desc2="" tech2=""/>
+
+            <Project id={2} name='snorkunking' src={snork2} desc={props.strings.project.snorkunking.description}
+                     tech={props.strings.project.snorkunking.tech} desc2="" tech2=""/>
+
+            <Project id={3} name='appartoo' src={appartoo} desc={props.strings.project.appartoo.description}
+                     tech={props.strings.project.appartoo.tech} desc2={props.strings.project.appartoo.description2}
+                     tech2={props.strings.project.appartoo.tech2}/>
+
+            <Project id={4} name='monita' src={monita} desc={props.strings.project.monita.description}
+                     tech={props.strings.project.monita.tech} desc2="" tech2=""/>
+
+            <Project id={5} name='portfolio' src={website} desc={props.strings.project.website.description}
+                     tech={props.strings.project.website.tech} desc2="" tech2=""/>
+
+            <Project id={6} name='classrooms' src={classrooms} desc={props.strings.project.classrooms.description}
+                     tech={props.strings.project.classrooms.tech} desc2="" tech2=""/>
+
+            <Project id={7} name='ëmgalaï grafik' src={emgalai} desc={props.strings.project.emgalai.description}
+                     tech={props.strings.project.emgalai.tech} desc2="" tech2=""/>
+
+            <Project id={8} name='dchroma' src={dchroma} desc={props.strings.project.dchroma.description}
+                     tech={props.strings.project.dchroma.tech} desc2="" tech2=""/>
         </section>
     )
 };

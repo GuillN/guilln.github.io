@@ -10,6 +10,8 @@ const Project = props => {
             <div id={`txt${id}`}>
                 <p className="project-text">{props.desc}</p>
                 <p className="project-text">{props.tech}</p>
+                {props.desc2 === "" ? "" : <p className="project-text">{props.desc2}</p>}
+                {props.tech2 === "" ? "" : <p className="project-text">{props.tech2}</p>}
             </div>
         </div>
     )
