@@ -9,11 +9,12 @@ import emgalai from "../../images/emgalai.png";
 import dchroma from "../../images/dchroma.png";
 import Project from "./project";
 
-const Projects = props =>{
+const Projects = props => {
     return (
         <section className="projects-section">
             <h2 className="projects-title">{props.strings.projects_title}</h2>
-            <Project id={1} name='luxo' src={luxo} desc={props.strings.luxo.description} tech={props.strings.luxo.tech}/>
+            <Project id={1} name='luxo' src={luxo} desc={props.strings.project.luxo.description}
+                     tech={props.strings.project.luxo.tech}/>
             {/*<div id="project1" className="project-container">*/}
             {/*    <h3 className="project-title">Luxo</h3>*/}
             {/*    <img id="img1" className="project-image" src={luxo} alt="luxo-img"/>*/}
