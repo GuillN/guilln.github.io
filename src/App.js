@@ -69,7 +69,6 @@ const App = () => {
         console.log('Animation start');
         console.log('Splitting words into letters ...');
         for (let i = 0; i < words.length; i++) {
-            console.log(`Word ${i}: ${words[i]}`);
             splitLetters(words[i])
         }
         console.log('Splitting done');
@@ -96,7 +95,7 @@ const App = () => {
                     cw[i].className = 'letter out';
                 }
                 console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
-                console.log(`Length of current word ${cw.length}`);
+                // console.log(`Length of current word ${cw.length}`);
                 if (i === cw.length-1) {
                     setTimeout(function () {
                         console.log(`Hiding word: ${words[currentWord].innerHTML}`);
@@ -176,13 +175,13 @@ const App = () => {
         }
 
         changeWord();
-        const interval = setInterval(changeWord, 8000);
+        setInterval(changeWord, 8000);
         window.addEventListener('scroll', handleScroll);
 
-        return function unmount() {
-            clearInterval(interval);
-            window.removeEventListener('scroll', handleScroll)
-        }
+        // return function unmount() {
+        //     clearInterval(interval);
+        //     window.removeEventListener('scroll', handleScroll)
+        // }
     });
 
     // componentWillUnmount() {
