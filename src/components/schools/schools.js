@@ -1,4 +1,5 @@
 import React from "react"
+import School from "./school";
 import isep from "../../images/iseplogo.png";
 import cnam from "../../images/cnamlogo.png";
 import cirruseo from "../../images/cirruseo.png";
@@ -11,16 +12,19 @@ const Schools = props => {
     return (
         <section className="schoolSection" id="schoolSection">
             <h2 className="school-title">Formation</h2>
-            <p className="text">
-                2013 - 2016<br/>
-                {props.strings.school_isep}: Institut Supérieur d'Électronique de Paris<br/>
-                {props.strings.cycle}
-            </p>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">
-                <img src={isep} alt="isep_logo" className="isep-logo"/>
-            </a>
-            <p className="text small">{props.strings.subjects}</p>
-            <p className="text-green">{props.strings.subjects2}</p>
+            <School date="2013 - 2016" school={props.strings.school_isep} cycle={props.strings.cycle}
+                    fullName="Institut Supérieur d'Électronique de Paris" href="https://www.isep.fr/"
+                    src={isep} name="isep" subj={props.strings.subjects} subj2={props.strings.subjects2}/>
+            {/*<p className="text">*/}
+            {/*    2013 - 2016<br/>*/}
+            {/*    {props.strings.school_isep}: Institut Supérieur d'Électronique de Paris<br/>*/}
+            {/*    {props.strings.cycle}*/}
+            {/*</p>*/}
+            {/*<a target="_blank" rel="noopener noreferrer" href="https://www.isep.fr/">*/}
+            {/*    <img src={isep} alt="isep_logo" className="isep-logo"/>*/}
+            {/*</a>*/}
+            {/*<p className="text small">{props.strings.subjects}</p>*/}
+            {/*<p className="text-green">{props.strings.subjects2}</p>*/}
             <hr className="line"/>
             <p className="text">
                 2016 - 2017<br/>
