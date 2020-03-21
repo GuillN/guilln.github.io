@@ -286,7 +286,7 @@ const App = () => {
         <div className="main">
             <header className="header" id="header">
                 <div className="top-logos">
-                    <div id="email-logo" onClick={this.copyToClipboard}>
+                    <div id="email-logo" onClick={copyToClipboard}>
                         <p id="email-txt">{email}</p>
                         <img src={mailLogo} className="small-logo" alt="mail_logo"/>
                     </div>
@@ -306,7 +306,7 @@ const App = () => {
                         <span className="word pomegranate">Video Game</span>
                         <span className="subtitle">Developer</span>
                     </div>
-                    <img src={chevron} alt="arrow_down" className="small-logo" onClick={App.scrollDown}/>
+                    <img src={chevron} alt="arrow_down" className="small-logo" onClick={scrollDown}/>
                 </div>
             </header>
 
@@ -403,7 +403,7 @@ const App = () => {
                 <p className="text-green">
                     {strings.subjects5}
                 </p>
-                <img src={chevron2} alt="arrow_down" className="small-logo" onClick={App.scrollDownest}/>
+                <img src={chevron2} alt="arrow_down" className="small-logo" onClick={scrollDownest}/>
             </section>
 
 
