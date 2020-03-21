@@ -181,13 +181,14 @@ const App = () => {
             changeWord();
             setInterval(changeWord, 8000);
             window.addEventListener('scroll', handleScroll);
+            isInitialMount.current = false
 
             // return function unmount() {
             //     clearInterval(interval);
             //     window.removeEventListener('scroll', handleScroll)
             // }
         } else {
-            isInitialMount.current = false
+            console.log('DO NOT SPEAK')
         }
     });
 
