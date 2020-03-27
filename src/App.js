@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import logo from './images/curved.svg';
@@ -24,131 +24,124 @@ const App = () => {
     const [strings, setStrings] = useState(strings_fr);
     const [email, setEmail] = useState(strings_fr.email);
 
-    const isInitialMount = useRef(true);
-
     useEffect(() => {
+        let words = document.getElementsByClassName('word');
+        let letters = [];
+        let currentWord = 0;
+        let firstLoop = true;
 
-        if (isInitialMount.current) {
-
-            let words = document.getElementsByClassName('word');
-            let letters = [];
-            let currentWord = 0;
-            let firstLoop = true;
-
-            // console.log('Animation start');
-            // console.log('Splitting words into letters ...');
-            for (let i = 0; i < words.length; i++) {
-                splitLetters(words[i])
-            }
-            // console.log('Splitting done');
-
-            function changeWord() {
-                // console.log('Changing word ...');
-                let cw = letters[currentWord];
-                if (firstLoop) {
-                    firstLoop = false;
-                    changeWordNext(cw)
-                } else {
-                    for (let i = 0; i < cw.length; i++) {
-                        // Step One : Slide down previous word's letters
-                        animateLetterOut(cw, i)
-                    }
-                }
-            }
-
-            function animateLetterOut(cw, i) {
-                setTimeout(() => {
-                    if (cw[i].innerHTML === 'k') {
-                        cw[i].className = 'letter out space';
-                    } else {
-                        cw[i].className = 'letter out';
-                    }
-                    // console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
-                    // console.log(`Length of current word ${cw.length}`);
-                    if (i === cw.length - 1) {
-                        setTimeout(function () {
-                            // console.log(`Hiding word: ${words[currentWord].innerHTML}`);
-                            for (let j = 0; j < cw.length; j++) {
-                                // Step Two : Collapse slided down letters
-                                collapseLetter(cw, j);
-                            }
-                        }, 300)
-                    }
-                }, i * 80)
-            }
-
-            function collapseLetter(word, i) {
-                setTimeout(function () {
-                    word[i].classList.toggle('collapsed');
-                    // console.log(`Letter ${word[i].innerHTML} collapsed`);
-                    if (i === word.length - 1) {
-                        // console.log('All letters collapsed');
-                        setTimeout(() => {
-                            currentWord = (currentWord === letters.length - 1) ? 0 : currentWord + 1;
-                            // console.log(`Displaying word: ${words[currentWord].innerHTML}`);
-                            // Step Three : Prepare next word
-                            changeWordNext(letters[currentWord])
-                        }, 300)
-                    }
-                }, i * 80)
-            }
-
-            function changeWordNext(nw) {
-                for (let i = 0; i < nw.length; i++) {
-                    // Step Four : Un-collapse next word's letters
-                    uncollapseLetter(nw, i)
-                }
-            }
-
-            function uncollapseLetter(word, i) {
-                setTimeout(function () {
-                    if (word[i].innerHTML === 'k') {
-                        word[i].className = 'letter behind space';
-                    } else {
-                        word[i].className = 'letter behind';
-                    }
-                    word[0].parentElement.style.opacity = 1;
-                    // Step Five : Make un-collapsed letters slide in
-                    animateLetterIn(word, i)
-                }, i * 80)
-            }
-
-            function animateLetterIn(nw, i) {
-                setTimeout(function () {
-                    if (nw[i].innerHTML === 'k') {
-                        nw[i].className = 'letter in space'
-                    } else {
-                        nw[i].className = 'letter in'
-                    }
-                    // console.log(`Letter ${nw[i].innerHTML} is in`)
-                }, i * 80)
-            }
-
-            function splitLetters(word) {
-                // console.log(`Splitting letters of word: ${word.innerHTML}`);
-                let content = word.innerHTML;
-                word.innerHTML = '';
-                let lettersArray = [];
-                for (let i = 0; i < content.length; i++) {
-                    let letter = document.createElement('span');
-                    if (content.charAt(i) === 'k') {
-                        letter.className = 'letter collapsed space';
-                    } else {
-                        letter.className = 'letter collapsed';
-                    }
-                    letter.innerHTML = content.charAt(i);
-                    word.appendChild(letter);
-                    lettersArray.push(letter);
-                }
-                letters.push(lettersArray);
-            }
-
-            changeWord();
-            setInterval(changeWord, 8000);
-            window.addEventListener('scroll', handleScroll);
-            isInitialMount.current = false
+        // console.log('Animation start');
+        // console.log('Splitting words into letters ...');
+        for (let i = 0; i < words.length; i++) {
+            splitLetters(words[i])
         }
-    });
+        // console.log('Splitting done');
+
+        function changeWord() {
+            // console.log('Changing word ...');
+            let cw = letters[currentWord];
+            if (firstLoop) {
+                firstLoop = false;
+                changeWordNext(cw)
+            } else {
+                for (let i = 0; i < cw.length; i++) {
+                    // Step One : Slide down previous word's letters
+                    animateLetterOut(cw, i)
+                }
+            }
+        }
+
+        function animateLetterOut(cw, i) {
+            setTimeout(() => {
+                if (cw[i].innerHTML === 'k') {
+                    cw[i].className = 'letter out space';
+                } else {
+                    cw[i].className = 'letter out';
+                }
+                // console.log(`Letter ${cw[i].innerHTML} at index ${i} is out`);
+                // console.log(`Length of current word ${cw.length}`);
+                if (i === cw.length - 1) {
+                    setTimeout(function () {
+                        // console.log(`Hiding word: ${words[currentWord].innerHTML}`);
+                        for (let j = 0; j < cw.length; j++) {
+                            // Step Two : Collapse slided down letters
+                            collapseLetter(cw, j);
+                        }
+                    }, 300)
+                }
+            }, i * 80)
+        }
+
+        function collapseLetter(word, i) {
+            setTimeout(function () {
+                word[i].classList.toggle('collapsed');
+                // console.log(`Letter ${word[i].innerHTML} collapsed`);
+                if (i === word.length - 1) {
+                    // console.log('All letters collapsed');
+                    setTimeout(() => {
+                        currentWord = (currentWord === letters.length - 1) ? 0 : currentWord + 1;
+                        // console.log(`Displaying word: ${words[currentWord].innerHTML}`);
+                        // Step Three : Prepare next word
+                        changeWordNext(letters[currentWord])
+                    }, 300)
+                }
+            }, i * 80)
+        }
+
+        function changeWordNext(nw) {
+            for (let i = 0; i < nw.length; i++) {
+                // Step Four : Un-collapse next word's letters
+                uncollapseLetter(nw, i)
+            }
+        }
+
+        function uncollapseLetter(word, i) {
+            setTimeout(function () {
+                if (word[i].innerHTML === 'k') {
+                    word[i].className = 'letter behind space';
+                } else {
+                    word[i].className = 'letter behind';
+                }
+                word[0].parentElement.style.opacity = 1;
+                // Step Five : Make un-collapsed letters slide in
+                animateLetterIn(word, i)
+            }, i * 80)
+        }
+
+        function animateLetterIn(nw, i) {
+            setTimeout(function () {
+                if (nw[i].innerHTML === 'k') {
+                    nw[i].className = 'letter in space'
+                } else {
+                    nw[i].className = 'letter in'
+                }
+                // console.log(`Letter ${nw[i].innerHTML} is in`)
+            }, i * 80)
+        }
+
+        function splitLetters(word) {
+            // console.log(`Splitting letters of word: ${word.innerHTML}`);
+            let content = word.innerHTML;
+            word.innerHTML = '';
+            let lettersArray = [];
+            for (let i = 0; i < content.length; i++) {
+                let letter = document.createElement('span');
+                if (content.charAt(i) === 'k') {
+                    letter.className = 'letter collapsed space';
+                } else {
+                    letter.className = 'letter collapsed';
+                }
+                letter.innerHTML = content.charAt(i);
+                word.appendChild(letter);
+                lettersArray.push(letter);
+            }
+            letters.push(lettersArray);
+        }
+
+        changeWord();
+        setInterval(changeWord, 8000);
+        window.addEventListener('scroll', handleScroll);
+    }, []);
 
     const copyToClipboard = e => {
         // Copy text
