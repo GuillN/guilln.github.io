@@ -240,7 +240,7 @@ const App = () => {
                         <p id="email-txt">{email}</p>
                         <img src={mailLogo} className="small-logo" alt="mail_logo"/>
                     </div>
-                    <a href="https://github.com/guilln">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/guilln">
                         <div id="git-logo">
                             <p id="git-txt">github.com/GuillN</p>
                             <img src={gitLogo} className="small-logo" alt="git_logo"/>

@@ -7,8 +7,8 @@ p, h2 {
     font-family: 'Cocon', sans-serif;
 }
 
-a {
-    text-decoration: none;
+a:focus {
+    outline: none;
 }
 
 .App-link {
