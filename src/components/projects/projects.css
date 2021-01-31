@@ -1,0 +1,159 @@
+.projects-section {
+    padding-top: 5vmin;
+    padding-bottom: 5vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.projects-title {
+    color: #16a085;
+    font-family: 'Cocon', sans-serif;
+    font-size: 7vmin;
+    margin-top: 0;
+    padding-top: 3vmin;
+}
+
+.project-container {
+    width: 75%;
+    background-color: lightgrey;
+    border: solid #16a085;
+    border-radius: 3vmin;
+    position: relative;
+    margin-bottom: 5vmin;
+    overflow: auto;
+    max-height: 90vmin;
+}
+
+.project-title {
+    color: #16a085;
+    font-family: 'Cocon', sans-serif;
+    font-size: 4vmin;
+}
+
+.project-image {
+    width: 90%;
+    padding-bottom: 6vmin;
+    transition: .5s ease-out;
+    height: auto;
+}
+
+.project-text {
+    opacity: 0;
+    color: #16a085;
+    background-color: lightgrey;
+    z-index: 1;
+    font-size: 2vmin;
+    border: solid;
+    border-radius: 1vmin;
+    padding: 1vmin;
+    text-align: center;
+    transition: .5s ease-out;
+}
+
+#txt1, #txt2, #txt3, #txt4, #txt5, #txt6, #txt7, #txt8, #txt9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 15vmin;
+    left: 10%;
+    max-width: 80%;
+}
+
+#project2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#project1:hover > #img1 {
+    filter: brightness(15%);
+    transition: .5s ease;
+}
+
+#project2:hover > #img2 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project3:hover > #img3 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project4:hover > #img4 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project5:hover > #img5 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project6:hover > #img6 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project7:hover > #img7 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project8:hover > #img8 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project9:hover > #img9 {
+    filter: brightness(33%);
+    transition: .5s ease;
+}
+
+#project1:hover > #txt1 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project2:hover > #txt2 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project3:hover > #txt3 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project4:hover > #txt4 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project5:hover > #txt5 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project6:hover > #txt6 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project7:hover > #txt7 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project8:hover > #txt8 p {
+    opacity: 1;
+    transition: .5s ease
+}
+
+#project9:hover > #txt9 p {
+    opacity: 1;
+    transition: .5s ease
+}

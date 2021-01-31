@@ -1,4 +1,5 @@
 import React from "react"
+import "./schools.css"
 import School from "./school"
 import isep from "../../images/iseplogo.png"
 import cnam from "../../images/cnamlogo.png"

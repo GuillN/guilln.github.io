@@ -1,4 +1,5 @@
 import React from "react"
+import "./cv.css"
 import dl from "../../images/download.svg"
 import uk from "../../images/united-kingdom.svg"
 import fr from "../../images/france.svg"

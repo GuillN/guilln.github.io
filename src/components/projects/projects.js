@@ -1,4 +1,6 @@
 import React from "react"
+import Project from "./project"
+import "./projects.css"
 import luxo from "../../images/luxo.png"
 import snork2 from "../../images/snorkunking_ig.PNG"
 import appartoo from "../../images/appartoo.png"
@@ -7,7 +9,7 @@ import website from "../../images/website.png"
 import classrooms from "../../images/classrooms.png"
 import emgalai from "../../images/emgalai.png"
 import dchroma from "../../images/dchroma.png"
-import Project from "./project"
+import gatling from "../../images/gatling.png"
 
 const Projects = props => {
     return (
@@ -38,6 +40,9 @@ const Projects = props => {
 
             <Project id={8} name='dchroma' src={dchroma} desc={props.strings.project.dchroma.description}
                      tech={props.strings.project.dchroma.tech} desc2="" tech2=""/>
+
+            <Project id={9} name='gatling license manager' src={gatling} desc={props.strings.project.gatling.description}
+                     tech={props.strings.project.gatling.tech} desc2="" tech2=""/>
         </section>
     )
 }

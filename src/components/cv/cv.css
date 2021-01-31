@@ -1,0 +1,76 @@
+.cvSection {
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 5vmin;
+}
+
+.dlCv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.texts {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dl {
+    display: flex;
+    flex-direction: column;
+    padding: 2vmin;
+    border-radius: 2vmin;
+    border: solid #6981bd;
+    background-color: white;
+    margin-left: 5vmin;
+    margin-bottom: 5vmin;
+}
+
+.cv {
+    height: 100vmin;
+    padding: 5vmin;
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
+    margin-left: 5vmin;
+    border-radius: 2vmin;
+    border: solid #6981bd;
+    background-color: white;
+}
+
+.dl-txt {
+    color: #6981bd;
+    font-family: 'Cocon', sans-serif;
+    font-size: 5vmin;
+}
+
+.dl-icon {
+    height: 5vmin;
+    margin-left: 2vmin;
+}
+
+.flag {
+    cursor: pointer;
+    height: 10vmin;
+    margin-left: 5vmin;
+    margin-bottom: 3vmin;
+    margin-right: 5vmin;
+    padding: 2vmin;
+    border-radius: 20vmin;
+}
+
+.small-logo {
+    height: 6vmin;
+    cursor: pointer;
+}

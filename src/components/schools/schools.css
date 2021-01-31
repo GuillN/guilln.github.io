@@ -1,0 +1,85 @@
+.schoolSection {
+    padding-top: 5vmin;
+    padding-bottom: 5vmin;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.school-title {
+    color: darkblue;
+    font-family: 'Cocon', sans-serif;
+    font-size: 7vh;
+    margin-top: 3vh;
+}
+
+.isep-logo {
+    height: 26vmin;
+    border: solid darkblue;
+    border-radius: 3vmin;
+    background-color: white;
+    padding: 2vmin;
+}
+
+.cnam-logo {
+    width: 55vmin;
+    border: solid darkblue;
+    border-radius: 3vmin;
+    background-color: white;
+    padding: 2vmin;
+}
+
+.upv-logo {
+    width: 55vmin;
+    border: solid darkblue;
+    border-radius: 3vmin;
+    background-color: white;
+    padding: 2vmin;
+}
+
+.internship-title {
+    font-size: 3vmin;
+    color: darkblue;
+    margin-bottom: 3vh;
+}
+
+.internship-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.internship-logo {
+    height: 10vmin;
+    border: solid darkblue;
+    border-radius: 3vmin;
+    background-color: white;
+    padding: 2vmin;
+}
+
+.internship-text {
+    font-size: 2vmin;
+    color: darkblue;
+    margin-left: 3vmin;
+}
+
+.internship-text > p {
+    margin-bottom: -1vh;
+}
+
+.text {
+    font-size: 3vmin;
+    color: darkblue;
+}
+
+.line {
+    width: 75%;
+    border: 1px solid darkblue;
+    margin-top: 5vh;
+}
+
+.small-line {
+    width: 35%;
+    border: 1px solid darkblue;
+}

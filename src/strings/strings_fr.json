@@ -46,6 +46,10 @@
     "dchroma": {
       "description": "Jeu vidéo de type 'metroid-like', un joueur",
       "tech": "Unity, C#"
+    },
+    "gatling": {
+      "description": "Creation d'une application pour Gatling Corp facilitant la gestion des licenses logiciel de leurs clients",
+      "tech": "Database: PostgreSQL - Back-end: Scala - Front-end: ReactJS"
     }
   }
 }
