@@ -21,7 +21,8 @@ const School = props => {
                         <p className="internship-title">{props.internship}: {props.internshipName.toUpperCase()}</p>
                         <div className="internship-container">
                             <a target="_blank" rel="noopener noreferrer" href={props.internshipHref}>
-                                <img src={props.internshipSrc} alt={`${props.internshipName}_logo`} className="internship-logo"/>
+                                <img src={props.internshipSrc} alt={`${props.internshipName}_logo`}
+                                     className="internship-logo"/>
                             </a>
                             <p className="internship-text">
                                 {props.internshipText.map(item => {
@@ -33,6 +34,6 @@ const School = props => {
             }
         </div>
     )
-};
+}
 
 export default School

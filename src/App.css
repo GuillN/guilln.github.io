@@ -59,7 +59,7 @@ a:focus {
     font-size: 5vmin;
 }
 
-.letter.collapsed{
+.letter.collapsed {
     visibility: hidden;
     max-width: 0;
 }

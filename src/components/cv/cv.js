@@ -1,19 +1,19 @@
 import React from "react"
-import dl from "../../images/download.svg";
-import uk from "../../images/united-kingdom.svg";
-import fr from "../../images/france.svg";
-import chevron1 from "../../images/darker-chevron-arrow-down.svg";
-import strings_en from "../../strings/strings_en";
-import strings_fr from "../../strings/strings_fr";
+import dl from "../../images/download.svg"
+import uk from "../../images/united-kingdom.svg"
+import fr from "../../images/france.svg"
+import chevron1 from "../../images/darker-chevron-arrow-down.svg"
+import strings_en from "../../strings/strings_en"
+import strings_fr from "../../strings/strings_fr"
 
 const Cv = props => {
 
-    let ukFlagStyle, frFlagStyle;
+    let ukFlagStyle, frFlagStyle
     if (props.strings === strings_en) {
         ukFlagStyle = {
             marginRight: '5vmin',
             border: 'solid #6981bd'
-        };
+        }
 
         frFlagStyle = {
             border: 'transparent'
@@ -22,7 +22,7 @@ const Cv = props => {
         ukFlagStyle = {
             marginRight: '5vmin',
             border: 'transparent'
-        };
+        }
         frFlagStyle = {
             border: 'solid #6981bd'
         }
@@ -46,6 +46,6 @@ const Cv = props => {
             <img src={chevron1} alt="arrow_down" className="small-logo" onClick={props.scrollDowner}/>
         </section>
     )
-};
+}
 
 export default Cv

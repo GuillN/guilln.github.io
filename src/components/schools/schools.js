@@ -1,14 +1,13 @@
 import React from "react"
-import School from "./school";
-import isep from "../../images/iseplogo.png";
-import cnam from "../../images/cnamlogo.png";
-import cirruseo from "../../images/cirruseo.png";
-import appartoo_logo from "../../images/appartoo_logo.png";
-import upv from "../../images/upvlogo.png";
-import chevron2 from "../../images/darkest-chevron-arrow-down.svg";
+import School from "./school"
+import isep from "../../images/iseplogo.png"
+import cnam from "../../images/cnamlogo.png"
+import cirruseo from "../../images/cirruseo.png"
+import appartoo_logo from "../../images/appartoo_logo.png"
+import upv from "../../images/upvlogo.png"
+import chevron2 from "../../images/darkest-chevron-arrow-down.svg"
 
 const Schools = props => {
-
     return (
         <section className="schoolSection" id="schoolSection">
             <h2 className="school-title">Formation</h2>
@@ -45,6 +44,6 @@ const Schools = props => {
             <img src={chevron2} alt="arrow_down" className="small-logo" onClick={props.scrollDownest}/>
         </section>
     )
-};
+}
 
 export default Schools

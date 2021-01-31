@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Project = props => {
-    const id = props.id;
-    const name = props.name;
+    const id = props.id
+    const name = props.name
     return (
         <div id={`project${id}`} className="project-container">
             <h3 className="project-title">{name.toUpperCase()}</h3>
@@ -15,6 +15,6 @@ const Project = props => {
             </div>
         </div>
     )
-};
+}
 
 export default Project

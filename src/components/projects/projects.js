@@ -1,13 +1,13 @@
 import React from "react"
-import luxo from "../../images/luxo.png";
-import snork2 from "../../images/snorkunking_ig.PNG";
-import appartoo from "../../images/appartoo.png";
-import monita from "../../images/monita.png";
-import website from "../../images/website.png";
-import classrooms from "../../images/classrooms.png";
-import emgalai from "../../images/emgalai.png";
-import dchroma from "../../images/dchroma.png";
-import Project from "./project";
+import luxo from "../../images/luxo.png"
+import snork2 from "../../images/snorkunking_ig.PNG"
+import appartoo from "../../images/appartoo.png"
+import monita from "../../images/monita.png"
+import website from "../../images/website.png"
+import classrooms from "../../images/classrooms.png"
+import emgalai from "../../images/emgalai.png"
+import dchroma from "../../images/dchroma.png"
+import Project from "./project"
 
 const Projects = props => {
     return (
@@ -40,6 +40,6 @@ const Projects = props => {
                      tech={props.strings.project.dchroma.tech} desc2="" tech2=""/>
         </section>
     )
-};
+}
 
 export default Projects

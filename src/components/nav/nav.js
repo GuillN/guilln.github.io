@@ -1,15 +1,14 @@
-import logo from "../../images/curved.svg";
-import React from "react";
+import logo from "../../images/curved.svg"
+import React from "react"
 import './nav.css'
 import strings_fr from '../../strings/strings_fr.json'
 import strings_en from '../../strings/strings_en.json'
 
 const Nav = props => {
-    let frNavStyle, enNavStyle;
+    let frNavStyle, enNavStyle
 
     if (props.strings === strings_en) {
-        frNavStyle = {
-        };
+        frNavStyle = {}
         enNavStyle = {
             borderBottom: 'solid',
             transition: '.2s'
@@ -18,16 +17,15 @@ const Nav = props => {
         frNavStyle = {
             borderBottom: 'solid',
             transition: '.2s'
-        };
-        enNavStyle = {
         }
+        enNavStyle = {}
     }
 
     const scrollTop = () => {
         window.scroll({top: 0, behavior: "smooth"})
-    };
+    }
 
-    return(
+    return (
         <nav className="nav" id="navbar">
             <img src={logo} alt="logo" onClick={scrollTop}/>
             <p id="link1" className="nav-link" onClick={props.scrollDown}>CV</p>
@@ -37,7 +35,6 @@ const Nav = props => {
             <p className="nav-link-right" onClick={props.stringsEn} style={enNavStyle}>EN</p>
         </nav>
     )
+}
 
-};
-
-export default Nav;
+export default Nav
