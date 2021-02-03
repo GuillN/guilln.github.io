@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.17d13893.chunk.css",
-    "main.js": "/static/js/main.2d9e6a1f.chunk.js",
-    "main.js.map": "/static/js/main.2d9e6a1f.chunk.js.map",
+    "main.js": "/static/js/main.a2f3e7d6.chunk.js",
+    "main.js.map": "/static/js/main.a2f3e7d6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.98c0142e.js",
     "runtime-main.js.map": "/static/js/runtime-main.98c0142e.js.map",
     "static/js/2.149adb67.chunk.js": "/static/js/2.149adb67.chunk.js",
@@ -19,10 +19,10 @@
     "static/media/classrooms.9f24f7c7.png": "/static/media/classrooms.9f24f7c7.png",
     "static/media/cnamlogo.b500a71f.png": "/static/media/cnamlogo.b500a71f.png",
     "static/media/curved.532bd61b.svg": "/static/media/curved.532bd61b.svg",
-    "static/media/cv_en.d0a333a2.png": "/static/media/cv_en.d0a333a2.png",
-    "static/media/cv_en.fbe78e1c.pdf": "/static/media/cv_en.fbe78e1c.pdf",
-    "static/media/cv_fr.7556cac6.png": "/static/media/cv_fr.7556cac6.png",
-    "static/media/cv_fr.7fdf424d.pdf": "/static/media/cv_fr.7fdf424d.pdf",
+    "static/media/cv_en.a104c16c.pdf": "/static/media/cv_en.a104c16c.pdf",
+    "static/media/cv_en.cc64081f.png": "/static/media/cv_en.cc64081f.png",
+    "static/media/cv_fr.2398f62c.pdf": "/static/media/cv_fr.2398f62c.pdf",
+    "static/media/cv_fr.73ad7d99.png": "/static/media/cv_fr.73ad7d99.png",
     "static/media/darker-chevron-arrow-down.e1e33d76.svg": "/static/media/darker-chevron-arrow-down.e1e33d76.svg",
     "static/media/darkest-chevron-arrow-down.61659df5.svg": "/static/media/darkest-chevron-arrow-down.61659df5.svg",
     "static/media/dchroma.7b645009.png": "/static/media/dchroma.7b645009.png",
@@ -43,6 +43,6 @@
     "static/js/runtime-main.98c0142e.js",
     "static/js/2.149adb67.chunk.js",
     "static/css/main.17d13893.chunk.css",
-    "static/js/main.2d9e6a1f.chunk.js"
+    "static/js/main.a2f3e7d6.chunk.js"
   ]
 }
