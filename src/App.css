@@ -11,6 +11,13 @@ a:focus {
     outline: none;
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
 .App-link {
     color: #61dafb;
 }

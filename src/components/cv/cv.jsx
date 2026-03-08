@@ -34,7 +34,7 @@ const Cv = props => {
             <div className="dlCv">
                 <img src={props.cv} alt="cv" className="cv"/>
                 <div className="dl">
-                    <a href={props.dl_cv} className="texts">
+                    <a href={props.dlCv} className="texts" download>
                         <p className="dl-txt">{props.strings.download}</p>
                         <img src={dl} alt="dl" className="dl-icon"/>
                     </a>
